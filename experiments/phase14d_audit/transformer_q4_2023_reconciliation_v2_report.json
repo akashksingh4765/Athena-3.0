@@ -1,0 +1,37 @@
+{
+  "audit": "Phase 14D-AUDIT V2",
+  "correction": "Use argmax(P_DOWN, P_NEUTRAL, P_UP), matching Phase 13B.",
+  "corrected_result": {
+    "Predictions": 590,
+    "Trades": 158,
+    "Neutral": 432,
+    "UP": 105,
+    "DOWN": 53,
+    "Avg_Gross_Bps": 2.9197762325674597,
+    "Avg_Net_5bps": -2.080223767432541,
+    "Gross_Bps_Sum": 461.32464474565865,
+    "Net_Bps_Sum_5bps": -328.6753552543414,
+    "Gross_Rupees": 4613.246447456587,
+    "Net_Rupees_5bps": -3286.753552543414,
+    "PF_5bps": 0.7404255967812038
+  },
+  "phase13b_reference": {
+    "Trades": 158,
+    "Avg_Gross_Bps": 2.92,
+    "Avg_Net_5bps": -2.08,
+    "Gross_Bps_Sum": 461.32
+  },
+  "differences": {
+    "trade_count": 0,
+    "avg_gross_bps": -0.0002237674325402672,
+    "avg_net_5bps": -0.0002237674325407113,
+    "gross_bps_sum": 0.0046447456586520275
+  },
+  "execution_convention": {
+    "prediction": "after current 5-minute candle close",
+    "entry": "next 5-minute OPEN",
+    "exit": "CLOSE of 6th future 5-minute candle",
+    "same_session_only": true,
+    "horizon_bars": 6
+  }
+}

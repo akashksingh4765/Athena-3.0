@@ -1,0 +1,116 @@
+{
+  "policy_name": "TRF_UP_HIGH_SELECTIVITY_V1",
+  "config_hash": "ecd0c6a62e32",
+  "model": "TRF",
+  "signal": "UP",
+  "action": "LONG",
+  "min_confidence": 0.55,
+  "min_directional_margin": 0.2,
+  "min_persistence": 2,
+  "horizon_bars": 6,
+  "primary_cost_bps": 5.0,
+  "starting_capital_rupees": 50000.0,
+  "max_leverage": 5.0,
+  "notional_rupees": 250000.0,
+  "prediction_rows": 2374,
+  "execution_rows": 2374,
+  "selected_trades": 0,
+  "cost_sensitivity": [
+    {
+      "Trades": 0,
+      "Hit_Rate": NaN,
+      "Avg_Gross_Bps": NaN,
+      "Avg_Net_Bps": NaN,
+      "Net_Rupees": 0.0,
+      "Return_Pct_on_Notional": 0.0,
+      "Profit_Factor": NaN,
+      "Strategy": "TRF_UP_HIGH_SELECTIVITY_V1",
+      "Cost_Bps": 0.0
+    },
+    {
+      "Trades": 0,
+      "Hit_Rate": NaN,
+      "Avg_Gross_Bps": NaN,
+      "Avg_Net_Bps": NaN,
+      "Net_Rupees": 0.0,
+      "Return_Pct_on_Notional": 0.0,
+      "Profit_Factor": NaN,
+      "Strategy": "TRF_UP_HIGH_SELECTIVITY_V1",
+      "Cost_Bps": 2.5
+    },
+    {
+      "Trades": 0,
+      "Hit_Rate": NaN,
+      "Avg_Gross_Bps": NaN,
+      "Avg_Net_Bps": NaN,
+      "Net_Rupees": 0.0,
+      "Return_Pct_on_Notional": 0.0,
+      "Profit_Factor": NaN,
+      "Strategy": "TRF_UP_HIGH_SELECTIVITY_V1",
+      "Cost_Bps": 5.0
+    },
+    {
+      "Trades": 0,
+      "Hit_Rate": NaN,
+      "Avg_Gross_Bps": NaN,
+      "Avg_Net_Bps": NaN,
+      "Net_Rupees": 0.0,
+      "Return_Pct_on_Notional": 0.0,
+      "Profit_Factor": NaN,
+      "Strategy": "TRF_UP_HIGH_SELECTIVITY_V1",
+      "Cost_Bps": 10.0
+    },
+    {
+      "Trades": 0,
+      "Hit_Rate": NaN,
+      "Avg_Gross_Bps": NaN,
+      "Avg_Net_Bps": NaN,
+      "Net_Rupees": 0.0,
+      "Return_Pct_on_Notional": 0.0,
+      "Profit_Factor": NaN,
+      "Strategy": "TRF_UP_HIGH_SELECTIVITY_V1",
+      "Cost_Bps": 15.0
+    },
+    {
+      "Trades": 0,
+      "Hit_Rate": NaN,
+      "Avg_Gross_Bps": NaN,
+      "Avg_Net_Bps": NaN,
+      "Net_Rupees": 0.0,
+      "Return_Pct_on_Notional": 0.0,
+      "Profit_Factor": NaN,
+      "Strategy": "TRF_UP_HIGH_SELECTIVITY_V1",
+      "Cost_Bps": 20.0
+    }
+  ],
+  "period_summary": [
+    {
+      "Trades": 0,
+      "Hit_Rate": NaN,
+      "Avg_Gross_Bps": NaN,
+      "Avg_Net_Bps": NaN,
+      "Net_Rupees": 0.0,
+      "Return_Pct_on_Notional": 0.0,
+      "Profit_Factor": NaN,
+      "Period": "DISCOVERY"
+    },
+    {
+      "Trades": 0,
+      "Hit_Rate": NaN,
+      "Avg_Gross_Bps": NaN,
+      "Avg_Net_Bps": NaN,
+      "Net_Rupees": 0.0,
+      "Return_Pct_on_Notional": 0.0,
+      "Profit_Factor": NaN,
+      "Period": "Q4_2023"
+    }
+  ],
+  "files": {
+    "prediction_file": ".\\experiments\\transformer\\transformer_v1_validation_predictions.csv",
+    "price_file": ".\\data\\processed\\nifty\\nifty50_5min_clean.csv",
+    "trade_log": ".\\experiments\\paper_trading\\final_selective_policy_trade_log.csv",
+    "summary": ".\\reports\\paper_trading\\final_selective_policy_summary.csv"
+  },
+  "paper_trading_status": "SHADOW_ONLY_NO_BROKER_ORDERS",
+  "warning": "Historical positive Q4 performance is not proof of future profitability. This policy must be forward paper-tested before any real-money execution."
+}

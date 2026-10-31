@@ -1,0 +1,16 @@
+{
+  "status": "NO_TRADES",
+  "prediction_rows": 2374,
+  "up_predictions": 475,
+  "approved_paper_trades": 0,
+  "policy": {
+    "model": "TRF",
+    "direction": "UP",
+    "min_confidence": 0.45,
+    "min_directional_margin": 0.1,
+    "min_persistence": 1,
+    "take_profit_pct": 0.001,
+    "stop_loss_pct": 0.003,
+    "estimated_cost_bps": 5.0
+  }
+}

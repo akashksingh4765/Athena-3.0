@@ -1,0 +1,198 @@
+{
+  "model": "CatBoost V4 early stopping",
+  "catboost_version": "1.2.10",
+  "training_period": "2015-2023",
+  "oos_period": "2024 (partial year)",
+  "train_file": ".\\data\\processed\\nifty\\splits\\TRAIN_2015_2023.csv",
+  "oos_file": ".\\data\\processed\\nifty\\splits\\OOS_2024.csv",
+  "model_file": ".\\models\\catboost\\catboost_v4_early_stopping.cbm",
+  "prediction_file": ".\\experiments\\catboost\\catboost_v4_oos_2024_predictions.csv",
+  "target_column": "Target_Name",
+  "target_classes": [
+    "DOWN",
+    "NEUTRAL",
+    "UP"
+  ],
+  "feature_count": 72,
+  "features": [
+    "Return_1",
+    "Return_2",
+    "Return_3",
+    "Return_6",
+    "Return_12",
+    "LogReturn_1",
+    "LogReturn_2",
+    "LogReturn_3",
+    "LogReturn_6",
+    "LogReturn_12",
+    "Range",
+    "Range_Pct",
+    "True_Range",
+    "True_Range_Pct",
+    "Body",
+    "Body_Pct",
+    "Candle_Up",
+    "Candle_Down",
+    "Upper_Wick",
+    "Lower_Wick",
+    "Upper_Wick_Pct",
+    "Lower_Wick_Pct",
+    "Close_Position",
+    "SMA_6",
+    "SMA_12",
+    "SMA_24",
+    "EMA_6",
+    "EMA_12",
+    "EMA_24",
+    "Close_vs_SMA_6",
+    "Close_vs_SMA_12",
+    "Close_vs_SMA_24",
+    "Close_vs_EMA_6",
+    "Close_vs_EMA_12",
+    "Close_vs_EMA_24",
+    "Distance_To_High_6",
+    "Distance_To_Low_6",
+    "Distance_To_High_12",
+    "Distance_To_Low_12",
+    "Distance_To_High_24",
+    "Distance_To_Low_24",
+    "Breakout_6",
+    "Breakdown_6",
+    "Breakout_12",
+    "Breakdown_12",
+    "Breakout_24",
+    "Breakdown_24",
+    "Session_Open",
+    "Distance_From_Session_Open",
+    "Session_High",
+    "Session_Low",
+    "Distance_From_Session_High",
+    "Distance_From_Session_Low",
+    "Session_Range",
+    "ROC_3",
+    "ROC_6",
+    "ROC_12",
+    "RSI_6",
+    "RSI_14",
+    "RSI_28",
+    "RollingVol_6",
+    "RollingVol_12",
+    "RollingVol_24",
+    "ATR_6",
+    "ATR_12",
+    "ATR_24",
+    "Minute_Of_Day",
+    "Minutes_Since_Open",
+    "Minutes_To_Close",
+    "Session_Progress",
+    "Sin_Time",
+    "Cos_Time"
+  ],
+  "training_rows": 89126,
+  "oos_rows": 2419,
+  "training_target_distribution": {
+    "DOWN": {
+      "count": 26600,
+      "percentage": 29.845387429033053
+    },
+    "NEUTRAL": {
+      "count": 36974,
+      "percentage": 41.485088526355945
+    },
+    "UP": {
+      "count": 25552,
+      "percentage": 28.669524044611
+    }
+  },
+  "oos_target_distribution": {
+    "DOWN": {
+      "count": 668,
+      "percentage": 27.614716825134355
+    },
+    "NEUTRAL": {
+      "count": 1195,
+      "percentage": 49.40057875155023
+    },
+    "UP": {
+      "count": 556,
+      "percentage": 22.98470442331542
+    }
+  },
+  "majority_baseline": {
+    "class": "NEUTRAL",
+    "accuracy": 0.4940057875155023,
+    "balanced_accuracy": 0.3333333333333333
+  },
+  "parameters": {
+    "loss_function": "MultiClass",
+    "eval_metric": "MultiClass",
+    "iterations": 1000,
+    "learning_rate": 0.05,
+    "depth": 6,
+    "l2_leaf_reg": 3.0,
+    "random_seed": 42,
+    "thread_count": 4,
+    "early_stopping_rounds": 50
+  },
+  "best_iteration": 262,
+  "best_validation_multiclass": 0.9643711706808935,
+  "stored_tree_count": 263,
+  "accuracy": 0.5274906986357999,
+  "balanced_accuracy": 0.4153901942960952,
+  "logloss": 0.9643711706808917,
+  "classification_report": {
+    "DOWN": {
+      "precision": 0.3821782178217822,
+      "recall": 0.28892215568862273,
+      "f1-score": 0.3290707587382779,
+      "support": 668.0
+    },
+    "NEUTRAL": {
+      "precision": 0.577354260089686,
+      "recall": 0.8619246861924686,
+      "f1-score": 0.6915072171869755,
+      "support": 1195.0
+    },
+    "UP": {
+      "precision": 0.4076923076923077,
+      "recall": 0.09532374100719425,
+      "f1-score": 0.15451895043731778,
+      "support": 556.0
+    },
+    "accuracy": 0.5274906986357999,
+    "macro avg": {
+      "precision": 0.4557415952012587,
+      "recall": 0.4153901942960952,
+      "f1-score": 0.39169897545419036,
+      "support": 2419.0
+    },
+    "weighted avg": {
+      "precision": 0.4844606504295363,
+      "recall": 0.5274906986357999,
+      "f1-score": 0.4679962496150285,
+      "support": 2419.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      193,
+      421,
+      54
+    ],
+    [
+      142,
+      1030,
+      23
+    ],
+    [
+      170,
+      333,
+      53
+    ]
+  ],
+  "prediction_distribution": {
+    "DOWN": 505,
+    "NEUTRAL": 1784,
+    "UP": 130
+  }
+}

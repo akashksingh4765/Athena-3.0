@@ -1,0 +1,293 @@
+{
+  "phase": "15_V3_1",
+  "config_hash": "787b7a8bd6eb",
+  "mode": "RESEARCH_PAPER_SHADOW_ONLY",
+  "broker_orders": false,
+  "config": {
+    "phase": "15_V3_1",
+    "model": "TRF",
+    "files": [
+      "experiments/transformer/transformer_v1_validation_predictions.csv",
+      "experiments/transformer/transformer_v1_forward_2024_predictions.csv"
+    ],
+    "horizon_bars": 6,
+    "discovery": [
+      "2023-01-01",
+      "2023-09-30"
+    ],
+    "verification": [
+      "2023-10-01",
+      "2023-12-31"
+    ],
+    "forward": [
+      "2024-01-01",
+      "2024-12-31"
+    ],
+    "history_end": "2022-12-31",
+    "max_wait": 3,
+    "state_edges": [
+      -1.0,
+      0.0,
+      1.0
+    ],
+    "min_cell": 200,
+    "min_transitions": 50,
+    "min_delta_samples": 30,
+    "protective_stop_pct": 0.3,
+    "momentum_diag_z": 1.0,
+    "rv_lookback": 12,
+    "capacity_quantile": "Q75",
+    "wait_fixed": {
+      "window": 3,
+      "z": 1.0,
+      "cap_gate": true,
+      "buffer_bps": 5.0
+    },
+    "cost_bps": 5.0,
+    "costs_bps": [
+      0.0,
+      2.5,
+      5.0,
+      10.0,
+      15.0,
+      20.0
+    ],
+    "capital": 50000.0,
+    "capital_mode": "PRINCIPAL_ONLY",
+    "leverage": 1.0,
+    "last_entry": "15:10",
+    "square_off": "15:15",
+    "paths": [
+      "LOW_BEFORE_HIGH",
+      "HIGH_BEFORE_LOW",
+      "CANDLE_HEURISTIC"
+    ],
+    "n_random": 30,
+    "random_pctl": 95,
+    "boot_reps": 1000,
+    "min_verify_trades": 30,
+    "min_positive_months": 2,
+    "seed": 1517,
+    "volume_used": false,
+    "tuned_parameters": "NONE"
+  },
+  "history_decision_points": 19410,
+  "trf_delta_discovery": [
+    {
+      "Side": "LONG",
+      "K": 0,
+      "N": 370,
+      "Delta_Bps": 0.4368723921822338,
+      "CI_Lo": -2.519488682510792,
+      "CI_Hi": 3.3722992224314026,
+      "Significant": false
+    },
+    {
+      "Side": "LONG",
+      "K": 1,
+      "N": 370,
+      "Delta_Bps": 0.41557388552487945,
+      "CI_Lo": -2.1646089654646365,
+      "CI_Hi": 3.290430741485836,
+      "Significant": false
+    },
+    {
+      "Side": "LONG",
+      "K": 2,
+      "N": 370,
+      "Delta_Bps": 0.19341509877289143,
+      "CI_Lo": -1.9363089908423425,
+      "CI_Hi": 2.291645217108752,
+      "Significant": false
+    },
+    {
+      "Side": "LONG",
+      "K": 3,
+      "N": 370,
+      "Delta_Bps": 0.16352155327068513,
+      "CI_Lo": -1.3487520648236433,
+      "CI_Hi": 1.7300612394248103,
+      "Significant": false
+    },
+    {
+      "Side": "SHORT",
+      "K": 0,
+      "N": 484,
+      "Delta_Bps": -2.917405626300845,
+      "CI_Lo": -7.4058499706297525,
+      "CI_Hi": 1.6258224823911267,
+      "Significant": false
+    },
+    {
+      "Side": "SHORT",
+      "K": 1,
+      "N": 484,
+      "Delta_Bps": -2.9176626233021223,
+      "CI_Lo": -6.324398702379774,
+      "CI_Hi": 0.8500111855450992,
+      "Significant": false
+    },
+    {
+      "Side": "SHORT",
+      "K": 2,
+      "N": 484,
+      "Delta_Bps": -2.414997513420978,
+      "CI_Lo": -5.05508484430872,
+      "CI_Hi": 0.3533156153609172,
+      "Significant": false
+    },
+    {
+      "Side": "SHORT",
+      "K": 3,
+      "N": 484,
+      "Delta_Bps": -1.8341386340785568,
+      "CI_Lo": -3.8035570469490643,
+      "CI_Hi": 0.17480992078768384,
+      "Significant": false
+    }
+  ],
+  "periods": {
+    "DISCOVERY": {
+      "signals": 854,
+      "sessions": 106
+    },
+    "VERIFICATION": {
+      "signals": 158,
+      "sessions": 26
+    }
+  },
+  "checks": {
+    "verification_trades": false,
+    "verification_net_positive_all_paths": false,
+    "beats_random_p95_all_paths": false,
+    "beats_enter_now_worst_path": true,
+    "positive_months_all_paths": false
+  },
+  "verdict": "NO TRADE - the value rule found no signal with positive expected value after costs. Nothing to promote (not trading beats losing, but it is not an edge).",
+  "forward_checks": null,
+  "break_even_cost": [
+    {
+      "Side": "LONG",
+      "K": 0,
+      "Best_State_Expected_Bps": 1.700984508016499,
+      "Model_Delta_Bps": 0.4368723921822338,
+      "Break_Even_Cost_Bps": 2.1378569001987326,
+      "Cells_Positive_At_5bps": 0,
+      "Cells_Total": 12
+    },
+    {
+      "Side": "LONG",
+      "K": 1,
+      "Best_State_Expected_Bps": 2.123966425351433,
+      "Model_Delta_Bps": 0.41557388552487945,
+      "Break_Even_Cost_Bps": 2.5395403108763124,
+      "Cells_Positive_At_5bps": 0,
+      "Cells_Total": 30
+    },
+    {
+      "Side": "LONG",
+      "K": 2,
+      "Best_State_Expected_Bps": 1.372503960226575,
+      "Model_Delta_Bps": 0.19341509877289143,
+      "Break_Even_Cost_Bps": 1.5659190589994663,
+      "Cells_Positive_At_5bps": 0,
+      "Cells_Total": 12
+    },
+    {
+      "Side": "LONG",
+      "K": 3,
+      "Best_State_Expected_Bps": 1.3632595401264918,
+      "Model_Delta_Bps": 0.16352155327068513,
+      "Break_Even_Cost_Bps": 1.5267810933971768,
+      "Cells_Positive_At_5bps": 0,
+      "Cells_Total": 30
+    },
+    {
+      "Side": "SHORT",
+      "K": 0,
+      "Best_State_Expected_Bps": 3.836428780160317,
+      "Model_Delta_Bps": -2.917405626300845,
+      "Break_Even_Cost_Bps": 0.919023153859472,
+      "Cells_Positive_At_5bps": 0,
+      "Cells_Total": 12
+    },
+    {
+      "Side": "SHORT",
+      "K": 1,
+      "Best_State_Expected_Bps": 3.5166667190509378,
+      "Model_Delta_Bps": -2.9176626233021223,
+      "Break_Even_Cost_Bps": 0.5990040957488154,
+      "Cells_Positive_At_5bps": 0,
+      "Cells_Total": 30
+    },
+    {
+      "Side": "SHORT",
+      "K": 2,
+      "Best_State_Expected_Bps": 2.279831470281691,
+      "Model_Delta_Bps": -2.414997513420978,
+      "Break_Even_Cost_Bps": -0.1351660431392867,
+      "Cells_Positive_At_5bps": 0,
+      "Cells_Total": 12
+    },
+    {
+      "Side": "SHORT",
+      "K": 3,
+      "Best_State_Expected_Bps": 4.390941654907536,
+      "Model_Delta_Bps": -1.8341386340785568,
+      "Break_Even_Cost_Bps": 2.556803020828979,
+      "Cells_Positive_At_5bps": 0,
+      "Cells_Total": 30
+    }
+  ],
+  "worst_path_totals": {
+    "DISCOVERY|ENTER_NOW": -4818.94590597798,
+    "DISCOVERY|VALUE_NO_WAIT": NaN,
+    "DISCOVERY|VALUE_TIMED": NaN,
+    "DISCOVERY|VALUE_TIMED_CAPEXIT": NaN,
+    "DISCOVERY|WAIT_FIXED": -1468.907211747253,
+    "VERIFICATION|ENTER_NOW": -270.15595523848845,
+    "VERIFICATION|VALUE_NO_WAIT": NaN,
+    "VERIFICATION|VALUE_TIMED": NaN,
+    "VERIFICATION|VALUE_TIMED_CAPEXIT": NaN,
+    "VERIFICATION|WAIT_FIXED": 73.26117467371225
+  },
+  "random_sanity": [
+    {
+      "Period": "DISCOVERY",
+      "Path": "LOW_BEFORE_HIGH",
+      "Random_Median_Rs": 0.0,
+      "Random_P95_Rs": 0.0
+    },
+    {
+      "Period": "DISCOVERY",
+      "Path": "HIGH_BEFORE_LOW",
+      "Random_Median_Rs": 0.0,
+      "Random_P95_Rs": 0.0
+    },
+    {
+      "Period": "DISCOVERY",
+      "Path": "CANDLE_HEURISTIC",
+      "Random_Median_Rs": 0.0,
+      "Random_P95_Rs": 0.0
+    },
+    {
+      "Period": "VERIFICATION",
+      "Path": "LOW_BEFORE_HIGH",
+      "Random_Median_Rs": 0.0,
+      "Random_P95_Rs": 0.0
+    },
+    {
+      "Period": "VERIFICATION",
+      "Path": "HIGH_BEFORE_LOW",
+      "Random_Median_Rs": 0.0,
+      "Random_P95_Rs": 0.0
+    },
+    {
+      "Period": "VERIFICATION",
+      "Path": "CANDLE_HEURISTIC",
+      "Random_Median_Rs": 0.0,
+      "Random_P95_Rs": 0.0
+    }
+  ],
+  "runtime_seconds": 7.6
+}

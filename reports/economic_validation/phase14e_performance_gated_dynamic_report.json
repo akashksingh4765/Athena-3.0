@@ -1,0 +1,66 @@
+{
+  "phase": "14E",
+  "name": "Performance-Gated Dynamic Trade Allocator V1",
+  "config_hash": "829b26065868",
+  "paper_trading_ready": false,
+  "broker_orders_enabled": false,
+  "primary_cost_bps": 5.0,
+  "starting_capital_rupees": 50000.0,
+  "max_leverage": 5.0,
+  "discovery_rows": 1784,
+  "calibration_rows": 200,
+  "q4_rows": 590,
+  "q1_rows": 0,
+  "eligible_pairs": 0,
+  "model_weights": {
+    "XGB": 0.0,
+    "LGB": 0.0,
+    "CAT": 0.0,
+    "LSTM": 0.0,
+    "TRF": 0.0
+  },
+  "direction_weights": {
+    "UP": {
+      "XGB": 0.0,
+      "LGB": 0.0,
+      "CAT": 0.0,
+      "LSTM": 0.0,
+      "TRF": 0.0
+    },
+    "DOWN": {
+      "XGB": 0.0,
+      "LGB": 0.0,
+      "CAT": 0.0,
+      "LSTM": 0.0,
+      "TRF": 0.0
+    }
+  },
+  "q4_summary": {
+    "Strategy": "GATED_DYNAMIC_Q4",
+    "Trades": 0,
+    "Hit_Rate": NaN,
+    "Avg_Gross_Bps": NaN,
+    "Avg_Net_5bps": NaN,
+    "Net_Rupees_5bps": 0.0,
+    "Return_5bps_pct": 0.0,
+    "Profit_Factor_5bps": NaN,
+    "Max_Drawdown_pct": 0.0
+  },
+  "q1_summary": {
+    "Strategy": "GATED_DYNAMIC_Q1",
+    "Trades": 0,
+    "Hit_Rate": NaN,
+    "Avg_Gross_Bps": NaN,
+    "Avg_Net_5bps": NaN,
+    "Net_Rupees_5bps": 0.0,
+    "Return_5bps_pct": 0.0,
+    "Profit_Factor_5bps": NaN,
+    "Max_Drawdown_pct": 0.0
+  },
+  "files": {
+    "discovery_stats": ".\\reports\\economic_validation\\phase14e_discovery_model_direction_stats.csv",
+    "summary": ".\\reports\\economic_validation\\phase14e_performance_gated_dynamic_summary.csv",
+    "cost_sensitivity": ".\\reports\\economic_validation\\phase14e_performance_gated_dynamic_cost_sensitivity.csv",
+    "trade_log": ".\\experiments\\economic_validation\\phase14e_performance_gated_dynamic_trade_log.csv"
+  }
+}

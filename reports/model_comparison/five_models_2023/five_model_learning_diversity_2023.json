@@ -1,0 +1,412 @@
+{
+  "comparison": "Athena 3.0 Five-Model Learning Diversity \u2014 2023",
+  "models": [
+    "XGBoost",
+    "LightGBM",
+    "CatBoost",
+    "LSTM",
+    "Transformer"
+  ],
+  "common_rows": 2374,
+  "first_common_timestamp": "2023-01-02 14:10:00",
+  "last_common_timestamp": "2023-12-29 14:55:00",
+  "actual_class_distribution": {
+    "DOWN": 0.22198820556023588,
+    "NEUTRAL": 0.4911541701769166,
+    "UP": 0.2868576242628475
+  },
+  "individual_metrics": [
+    {
+      "Model": "XGBoost",
+      "Rows": 2374,
+      "Accuracy": 0.4890480202190396,
+      "Balanced_Accuracy": 0.4044186046300445,
+      "Pred_DOWN_pct": 0.18449873631002528,
+      "Pred_NEUTRAL_pct": 0.6423757371524853,
+      "Pred_UP_pct": 0.17312552653748947
+    },
+    {
+      "Model": "LightGBM",
+      "Rows": 2374,
+      "Accuracy": 0.4865206402695872,
+      "Balanced_Accuracy": 0.4080020605538886,
+      "Pred_DOWN_pct": 0.19250210614995789,
+      "Pred_NEUTRAL_pct": 0.6221566975568661,
+      "Pred_UP_pct": 0.18534119629317608
+    },
+    {
+      "Model": "CatBoost",
+      "Rows": 2374,
+      "Accuracy": 0.4983150800336984,
+      "Balanced_Accuracy": 0.4082930704812949,
+      "Pred_DOWN_pct": 0.15037910699241785,
+      "Pred_NEUTRAL_pct": 0.6486941870261163,
+      "Pred_UP_pct": 0.2009267059814659
+    },
+    {
+      "Model": "LSTM",
+      "Rows": 2374,
+      "Accuracy": 0.5037910699241785,
+      "Balanced_Accuracy": 0.40624172092767535,
+      "Pred_DOWN_pct": 0.18871103622577928,
+      "Pred_NEUTRAL_pct": 0.7013479359730412,
+      "Pred_UP_pct": 0.10994102780117944
+    },
+    {
+      "Model": "Transformer",
+      "Rows": 2374,
+      "Accuracy": 0.4962089300758214,
+      "Balanced_Accuracy": 0.43085870178302327,
+      "Pred_DOWN_pct": 0.22620050547598988,
+      "Pred_NEUTRAL_pct": 0.573715248525695,
+      "Pred_UP_pct": 0.2000842459983151
+    }
+  ],
+  "prediction_agreement": {
+    "XGBoost": {
+      "XGBoost": 1.0,
+      "LightGBM": 0.8778433024431339,
+      "CatBoost": 0.8268744734625105,
+      "LSTM": 0.7944397641112048,
+      "Transformer": 0.7245155855096883
+    },
+    "LightGBM": {
+      "XGBoost": 0.8778433024431339,
+      "LightGBM": 1.0,
+      "CatBoost": 0.8159224936815501,
+      "LSTM": 0.7750631844987363,
+      "Transformer": 0.7253580454928391
+    },
+    "CatBoost": {
+      "XGBoost": 0.8268744734625105,
+      "LightGBM": 0.8159224936815501,
+      "CatBoost": 1.0,
+      "LSTM": 0.8117101937657961,
+      "Transformer": 0.7607413647851727
+    },
+    "LSTM": {
+      "XGBoost": 0.7944397641112048,
+      "LightGBM": 0.7750631844987363,
+      "CatBoost": 0.8117101937657961,
+      "LSTM": 1.0,
+      "Transformer": 0.7961246840775064
+    },
+    "Transformer": {
+      "XGBoost": 0.7245155855096883,
+      "LightGBM": 0.7253580454928391,
+      "CatBoost": 0.7607413647851727,
+      "LSTM": 0.7961246840775064,
+      "Transformer": 1.0
+    }
+  },
+  "prediction_disagreement": {
+    "XGBoost": {
+      "XGBoost": 0.0,
+      "LightGBM": 0.12215669755686609,
+      "CatBoost": 0.17312552653748947,
+      "LSTM": 0.20556023588879524,
+      "Transformer": 0.2754844144903117
+    },
+    "LightGBM": {
+      "XGBoost": 0.12215669755686609,
+      "LightGBM": 0.0,
+      "CatBoost": 0.18407750631844988,
+      "LSTM": 0.22493681550126365,
+      "Transformer": 0.2746419545071609
+    },
+    "CatBoost": {
+      "XGBoost": 0.17312552653748947,
+      "LightGBM": 0.18407750631844988,
+      "CatBoost": 0.0,
+      "LSTM": 0.18828980623420388,
+      "Transformer": 0.23925863521482726
+    },
+    "LSTM": {
+      "XGBoost": 0.20556023588879524,
+      "LightGBM": 0.22493681550126365,
+      "CatBoost": 0.18828980623420388,
+      "LSTM": 0.0,
+      "Transformer": 0.20387531592249364
+    },
+    "Transformer": {
+      "XGBoost": 0.2754844144903117,
+      "LightGBM": 0.2746419545071609,
+      "CatBoost": 0.23925863521482726,
+      "LSTM": 0.20387531592249364,
+      "Transformer": 0.0
+    }
+  },
+  "probability_correlation": {
+    "XGBoost": {
+      "XGBoost": 1.0,
+      "LightGBM": 0.9771125409413396,
+      "CatBoost": 0.9493246598606361,
+      "LSTM": 0.8274867359568987,
+      "Transformer": 0.8116012248326847
+    },
+    "LightGBM": {
+      "XGBoost": 0.9771125409413398,
+      "LightGBM": 1.0,
+      "CatBoost": 0.9476763603683207,
+      "LSTM": 0.8242541445828445,
+      "Transformer": 0.8209647219349664
+    },
+    "CatBoost": {
+      "XGBoost": 0.9493246598606362,
+      "LightGBM": 0.9476763603683206,
+      "CatBoost": 1.0,
+      "LSTM": 0.8727776295473606,
+      "Transformer": 0.8570673197343557
+    },
+    "LSTM": {
+      "XGBoost": 0.8274867359568987,
+      "LightGBM": 0.8242541445828446,
+      "CatBoost": 0.8727776295473606,
+      "LSTM": 1.0,
+      "Transformer": 0.8934674663242395
+    },
+    "Transformer": {
+      "XGBoost": 0.8116012248326847,
+      "LightGBM": 0.8209647219349664,
+      "CatBoost": 0.8570673197343558,
+      "LSTM": 0.8934674663242395,
+      "Transformer": 1.0
+    }
+  },
+  "correctness_overlap": {
+    "XGBoost": {
+      "XGBoost": 1.0,
+      "LightGBM": 0.9048020219039595,
+      "CatBoost": 0.8677337826453243,
+      "LSTM": 0.8479359730412805,
+      "Transformer": 0.7796967144060657
+    },
+    "LightGBM": {
+      "XGBoost": 0.9048020219039595,
+      "LightGBM": 1.0,
+      "CatBoost": 0.8609941027801179,
+      "LSTM": 0.8336141533277169,
+      "Transformer": 0.7847514743049705
+    },
+    "CatBoost": {
+      "XGBoost": 0.8677337826453243,
+      "LightGBM": 0.8609941027801179,
+      "CatBoost": 1.0,
+      "LSTM": 0.8563605728727886,
+      "Transformer": 0.8167649536647009
+    },
+    "LSTM": {
+      "XGBoost": 0.8479359730412805,
+      "LightGBM": 0.8336141533277169,
+      "CatBoost": 0.8563605728727886,
+      "LSTM": 1.0,
+      "Transformer": 0.8483572030328559
+    },
+    "Transformer": {
+      "XGBoost": 0.7796967144060657,
+      "LightGBM": 0.7847514743049705,
+      "CatBoost": 0.8167649536647009,
+      "LSTM": 0.8483572030328559,
+      "Transformer": 1.0
+    }
+  },
+  "unique_correctness": [
+    {
+      "Model_A": "XGBoost",
+      "Model_B": "LightGBM",
+      "A_only_correct": 116,
+      "B_only_correct": 110,
+      "Both_correct": 1045,
+      "Both_wrong": 1103
+    },
+    {
+      "Model_A": "XGBoost",
+      "Model_B": "CatBoost",
+      "A_only_correct": 146,
+      "B_only_correct": 168,
+      "Both_correct": 1015,
+      "Both_wrong": 1045
+    },
+    {
+      "Model_A": "XGBoost",
+      "Model_B": "LSTM",
+      "A_only_correct": 163,
+      "B_only_correct": 198,
+      "Both_correct": 998,
+      "Both_wrong": 1015
+    },
+    {
+      "Model_A": "XGBoost",
+      "Model_B": "Transformer",
+      "A_only_correct": 253,
+      "B_only_correct": 270,
+      "Both_correct": 908,
+      "Both_wrong": 943
+    },
+    {
+      "Model_A": "LightGBM",
+      "Model_B": "CatBoost",
+      "A_only_correct": 151,
+      "B_only_correct": 179,
+      "Both_correct": 1004,
+      "Both_wrong": 1040
+    },
+    {
+      "Model_A": "LightGBM",
+      "Model_B": "LSTM",
+      "A_only_correct": 177,
+      "B_only_correct": 218,
+      "Both_correct": 978,
+      "Both_wrong": 1001
+    },
+    {
+      "Model_A": "LightGBM",
+      "Model_B": "Transformer",
+      "A_only_correct": 244,
+      "B_only_correct": 267,
+      "Both_correct": 911,
+      "Both_wrong": 952
+    },
+    {
+      "Model_A": "CatBoost",
+      "Model_B": "LSTM",
+      "A_only_correct": 164,
+      "B_only_correct": 177,
+      "Both_correct": 1019,
+      "Both_wrong": 1014
+    },
+    {
+      "Model_A": "CatBoost",
+      "Model_B": "Transformer",
+      "A_only_correct": 220,
+      "B_only_correct": 215,
+      "Both_correct": 963,
+      "Both_wrong": 976
+    },
+    {
+      "Model_A": "LSTM",
+      "Model_B": "Transformer",
+      "A_only_correct": 189,
+      "B_only_correct": 171,
+      "Both_correct": 1007,
+      "Both_wrong": 1007
+    }
+  ],
+  "directional_consensus": [
+    {
+      "Direction": "DOWN",
+      "Model_Count": 1,
+      "Rows": 138,
+      "Coverage": 0.05812973883740522,
+      "Directional_Accuracy": 0.2898550724637681
+    },
+    {
+      "Direction": "DOWN",
+      "Model_Count": 2,
+      "Rows": 120,
+      "Coverage": 0.05054759898904802,
+      "Directional_Accuracy": 0.35833333333333334
+    },
+    {
+      "Direction": "DOWN",
+      "Model_Count": 3,
+      "Rows": 84,
+      "Coverage": 0.03538331929233361,
+      "Directional_Accuracy": 0.4166666666666667
+    },
+    {
+      "Direction": "DOWN",
+      "Model_Count": 4,
+      "Rows": 98,
+      "Coverage": 0.041280539174389216,
+      "Directional_Accuracy": 0.3979591836734694
+    },
+    {
+      "Direction": "DOWN",
+      "Model_Count": 5,
+      "Rows": 243,
+      "Coverage": 0.10235888795282225,
+      "Directional_Accuracy": 0.2962962962962963
+    },
+    {
+      "Direction": "NEUTRAL",
+      "Model_Count": 1,
+      "Rows": 93,
+      "Coverage": 0.039174389216512215,
+      "Directional_Accuracy": 0.3978494623655914
+    },
+    {
+      "Direction": "NEUTRAL",
+      "Model_Count": 2,
+      "Rows": 110,
+      "Coverage": 0.04633529907329402,
+      "Directional_Accuracy": 0.5363636363636364
+    },
+    {
+      "Direction": "NEUTRAL",
+      "Model_Count": 3,
+      "Rows": 196,
+      "Coverage": 0.08256107834877843,
+      "Directional_Accuracy": 0.5714285714285714
+    },
+    {
+      "Direction": "NEUTRAL",
+      "Model_Count": 4,
+      "Rows": 267,
+      "Coverage": 0.11246840775063184,
+      "Directional_Accuracy": 0.48314606741573035
+    },
+    {
+      "Direction": "NEUTRAL",
+      "Model_Count": 5,
+      "Rows": 1120,
+      "Coverage": 0.4717775905644482,
+      "Directional_Accuracy": 0.6303571428571428
+    },
+    {
+      "Direction": "UP",
+      "Model_Count": 1,
+      "Rows": 364,
+      "Coverage": 0.15332771693344566,
+      "Directional_Accuracy": 0.33791208791208793
+    },
+    {
+      "Direction": "UP",
+      "Model_Count": 2,
+      "Rows": 263,
+      "Coverage": 0.11078348778433024,
+      "Directional_Accuracy": 0.2509505703422053
+    },
+    {
+      "Direction": "UP",
+      "Model_Count": 3,
+      "Rows": 176,
+      "Coverage": 0.07413647851727043,
+      "Directional_Accuracy": 0.3125
+    },
+    {
+      "Direction": "UP",
+      "Model_Count": 4,
+      "Rows": 99,
+      "Coverage": 0.04170176916596462,
+      "Directional_Accuracy": 0.26262626262626265
+    },
+    {
+      "Direction": "UP",
+      "Model_Count": 5,
+      "Rows": 50,
+      "Coverage": 0.02106149957877001,
+      "Directional_Accuracy": 0.26
+    }
+  ],
+  "all_five_agreement": {
+    "rows": 1413,
+    "coverage": 0.5951979780960405,
+    "accuracy": 0.5598018400566172
+  },
+  "majority_vote": {
+    "coverage": 0.9827295703454086,
+    "accuracy": 0.508786969567081,
+    "balanced_accuracy": 0.4160679761413777
+  }
+}

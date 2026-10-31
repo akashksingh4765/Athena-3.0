@@ -1,0 +1,111 @@
+{
+  "phase": "12A",
+  "version": "V2 leak-safe",
+  "horizon_bars_assumed": 6,
+  "horizon_minutes": 30,
+  "embargo_extra_bars": 0,
+  "timing_diagnostics": {
+    "rows": 2374,
+    "median_gap_minutes_same_session": 5.0,
+    "share_gaps_under_horizon": 1.0,
+    "share_rows_where_prev_label_unresolved": 0.8997472620050547
+  },
+  "splits": {
+    "train": 1584,
+    "calibration": 200,
+    "verification": 590,
+    "purged": 0
+  },
+  "base_ties": 41,
+  "verification_base_accuracy": 0.6338983050847458,
+  "verification_base_mistake_rate": 0.36610169491525424,
+  "feature_count": 103,
+  "operating_coverage": 0.6,
+  "layer_hgb_operating_threshold": 0.6074396898807816,
+  "scorers": [
+    {
+      "scorer": "Layer_HGB",
+      "ver_auc": 0.6640052485640721,
+      "ver_auc_ci_low": 0.5913226418358337,
+      "ver_auc_ci_high": 0.7302886681782095,
+      "auc_month_10": 0.6993406593406593,
+      "auc_month_11": 0.6030772929438636,
+      "auc_month_12": 0.6617565003905814,
+      "op_target_coverage": 0.6,
+      "op_threshold": 0.6074396898807816,
+      "op_realized_coverage": 0.676271186440678,
+      "op_accepted_accuracy": 0.7092731829573935,
+      "ver_log_loss": 0.6246663086565907,
+      "ver_brier": 0.21720488880502797,
+      "ver_balanced_acc_at_0.5": 0.5910823925529808
+    },
+    {
+      "scorer": "Layer_LOGIT",
+      "ver_auc": 0.6643518518518519,
+      "ver_auc_ci_low": 0.597729119789456,
+      "ver_auc_ci_high": 0.7271099801223653,
+      "auc_month_10": 0.7350549450549451,
+      "auc_month_11": 0.6526024762591658,
+      "auc_month_12": 0.5679053677044972,
+      "op_target_coverage": 0.6,
+      "op_threshold": 0.5895828021074678,
+      "op_realized_coverage": 0.6593220338983051,
+      "op_accepted_accuracy": 0.7017994858611826,
+      "ver_log_loss": 0.631907372831893,
+      "ver_brier": 0.22043083033465166,
+      "ver_balanced_acc_at_0.5": 0.5578332343038226
+    },
+    {
+      "scorer": "Free_LowBaseConfidence",
+      "ver_auc": 0.6265597147950089,
+      "ver_auc_ci_low": 0.5514901669725093,
+      "ver_auc_ci_high": 0.7067123287362939,
+      "auc_month_10": 0.69,
+      "auc_month_11": 0.6558480586608968,
+      "auc_month_12": 0.5084253989510099,
+      "op_target_coverage": 0.6,
+      "op_threshold": -0.4294027493717139,
+      "op_realized_coverage": 0.6779661016949152,
+      "op_accepted_accuracy": 0.6825
+    },
+    {
+      "scorer": "Free_LowMargin",
+      "ver_auc": 0.6231308179837591,
+      "ver_auc_ci_low": 0.5566937549706857,
+      "ver_auc_ci_high": 0.6889568028511692,
+      "auc_month_10": 0.6737362637362637,
+      "auc_month_11": 0.6557278519052772,
+      "auc_month_12": 0.5128891864747238,
+      "op_target_coverage": 0.6,
+      "op_threshold": -0.09806173434451265,
+      "op_realized_coverage": 0.6677966101694915,
+      "op_accepted_accuracy": 0.6802030456852792
+    },
+    {
+      "scorer": "Free_FewVotes",
+      "ver_auc": 0.5729971281441869,
+      "ver_auc_ci_low": 0.5086002648079466,
+      "ver_auc_ci_high": 0.6421846891854901,
+      "auc_month_10": 0.6190109890109889,
+      "auc_month_11": 0.5931001322274312,
+      "auc_month_12": 0.49916303983930355,
+      "op_target_coverage": 0.6,
+      "op_threshold": -5.5,
+      "op_realized_coverage": 0.652542372881356,
+      "op_accepted_accuracy": 0.6883116883116883
+    }
+  ],
+  "best_free_baseline": "Free_LowBaseConfidence",
+  "layer_minus_best_free_auc_ci": {
+    "Layer_HGB": [
+      -0.04294985675041172,
+      0.12481634178840904
+    ],
+    "Layer_LOGIT": [
+      -0.03850357289116543,
+      0.11183290344841325
+    ]
+  },
+  "leak_audit_v1_style_auc": 0.8405996236878589,
+  "out_of_scope": "trade economics; filtering accuracy is not profitability"
+}

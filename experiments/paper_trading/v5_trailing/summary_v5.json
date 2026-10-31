@@ -1,0 +1,345 @@
+{
+  "engine": "athena_paper_engine_v5_trailing",
+  "mode": "PAPER_SHADOW_ONLY",
+  "broker_orders": false,
+  "policy": {
+    "model": "TRF",
+    "hard_stop_pct": 0.03,
+    "trail_pct": 0.03,
+    "trail_floor_at_breakeven": true,
+    "round_trip_cost_bps": 5.0,
+    "initial_capital_rupees": 50000.0,
+    "capital_mode": "PRINCIPAL_ONLY",
+    "last_entry_bar": "15:10",
+    "square_off_bar": "15:15",
+    "confidence_filter": null
+  },
+  "median_bar_range_pct": 0.06687527348685174,
+  "results": {
+    "LOW_BEFORE_HIGH": {
+      "trades": 840,
+      "trading_days": 132,
+      "trades_per_day": 6.363636363636363,
+      "win_rate_pct": 28.69047619047619,
+      "avg_net_return_pct": -0.0327650626763954,
+      "avg_net_rupees": -13.419513785408489,
+      "avg_winner_rupees": 20.434262224770997,
+      "avg_loser_rupees": -27.085365846008262,
+      "total_net_rupees": -11272.391579743131,
+      "profit_factor": 0.3040465744286328,
+      "max_drawdown_rupees": -11593.011820641053,
+      "final_trading_capital": 33802.95122408712,
+      "final_profit_wallet": 4924.657196169808,
+      "exit_reasons": {
+        "HARD_STOP": 489,
+        "TRAIL_EXIT": 351
+      },
+      "trailing_activated_pct": 41.785714285714285,
+      "exited_in_entry_bar_pct": 81.78571428571428,
+      "avg_holding_bars": 1.2380952380952381,
+      "by_side": {
+        "LONG": {
+          "trades": 348,
+          "win_rate_pct": 21.839080459770116,
+          "total_net_rupees": -5844.89928691296
+        },
+        "SHORT": {
+          "trades": 492,
+          "win_rate_pct": 33.53658536585366,
+          "total_net_rupees": -5427.492292830171
+        }
+      },
+      "monthly": [
+        {
+          "Month": "2023-01",
+          "Trades": 140,
+          "Net_Rupees": -2133.08,
+          "Avg_Rupees": -15.24
+        },
+        {
+          "Month": "2023-02",
+          "Trades": 122,
+          "Net_Rupees": -1309.81,
+          "Avg_Rupees": -10.74
+        },
+        {
+          "Month": "2023-03",
+          "Trades": 144,
+          "Net_Rupees": -1627.02,
+          "Avg_Rupees": -11.3
+        },
+        {
+          "Month": "2023-04",
+          "Trades": 42,
+          "Net_Rupees": -864.03,
+          "Avg_Rupees": -20.57
+        },
+        {
+          "Month": "2023-05",
+          "Trades": 52,
+          "Net_Rupees": -620.52,
+          "Avg_Rupees": -11.93
+        },
+        {
+          "Month": "2023-06",
+          "Trades": 34,
+          "Net_Rupees": -553.84,
+          "Avg_Rupees": -16.29
+        },
+        {
+          "Month": "2023-07",
+          "Trades": 74,
+          "Net_Rupees": -787.17,
+          "Avg_Rupees": -10.64
+        },
+        {
+          "Month": "2023-08",
+          "Trades": 63,
+          "Net_Rupees": -1280.95,
+          "Avg_Rupees": -20.33
+        },
+        {
+          "Month": "2023-09",
+          "Trades": 49,
+          "Net_Rupees": -808.41,
+          "Avg_Rupees": -16.5
+        },
+        {
+          "Month": "2023-10",
+          "Trades": 47,
+          "Net_Rupees": -484.88,
+          "Avg_Rupees": -10.32
+        },
+        {
+          "Month": "2023-11",
+          "Trades": 11,
+          "Net_Rupees": -145.78,
+          "Avg_Rupees": -13.25
+        },
+        {
+          "Month": "2023-12",
+          "Trades": 62,
+          "Net_Rupees": -656.89,
+          "Avg_Rupees": -10.6
+        }
+      ]
+    },
+    "HIGH_BEFORE_LOW": {
+      "trades": 826,
+      "trading_days": 132,
+      "trades_per_day": 6.257575757575758,
+      "win_rate_pct": 24.213075060532688,
+      "avg_net_return_pct": -0.04016637677230774,
+      "avg_net_rupees": -16.3209338667504,
+      "avg_winner_rupees": 18.62895608355744,
+      "avg_loser_rupees": -27.575132356806606,
+      "total_net_rupees": -13481.091373935833,
+      "profit_factor": 0.21652912415039172,
+      "max_drawdown_rupees": -13707.296839033308,
+      "final_trading_capital": 32793.11740935266,
+      "final_profit_wallet": 3725.791216711489,
+      "exit_reasons": {
+        "HARD_STOP": 527,
+        "TRAIL_EXIT": 299
+      },
+      "trailing_activated_pct": 36.19854721549637,
+      "exited_in_entry_bar_pct": 80.26634382566587,
+      "avg_holding_bars": 1.2372881355932204,
+      "by_side": {
+        "LONG": {
+          "trades": 384,
+          "win_rate_pct": 25.260416666666668,
+          "total_net_rupees": -5529.126383420016
+        },
+        "SHORT": {
+          "trades": 442,
+          "win_rate_pct": 23.30316742081448,
+          "total_net_rupees": -7951.964990515816
+        }
+      },
+      "monthly": [
+        {
+          "Month": "2023-01",
+          "Trades": 137,
+          "Net_Rupees": -2601.57,
+          "Avg_Rupees": -18.99
+        },
+        {
+          "Month": "2023-02",
+          "Trades": 112,
+          "Net_Rupees": -2054.65,
+          "Avg_Rupees": -18.35
+        },
+        {
+          "Month": "2023-03",
+          "Trades": 137,
+          "Net_Rupees": -2685.3,
+          "Avg_Rupees": -19.6
+        },
+        {
+          "Month": "2023-04",
+          "Trades": 46,
+          "Net_Rupees": -900.73,
+          "Avg_Rupees": -19.58
+        },
+        {
+          "Month": "2023-05",
+          "Trades": 53,
+          "Net_Rupees": -817.82,
+          "Avg_Rupees": -15.43
+        },
+        {
+          "Month": "2023-06",
+          "Trades": 38,
+          "Net_Rupees": -559.75,
+          "Avg_Rupees": -14.73
+        },
+        {
+          "Month": "2023-07",
+          "Trades": 69,
+          "Net_Rupees": -638.05,
+          "Avg_Rupees": -9.25
+        },
+        {
+          "Month": "2023-08",
+          "Trades": 63,
+          "Net_Rupees": -1149.76,
+          "Avg_Rupees": -18.25
+        },
+        {
+          "Month": "2023-09",
+          "Trades": 45,
+          "Net_Rupees": -669.65,
+          "Avg_Rupees": -14.88
+        },
+        {
+          "Month": "2023-10",
+          "Trades": 47,
+          "Net_Rupees": -526.08,
+          "Avg_Rupees": -11.19
+        },
+        {
+          "Month": "2023-11",
+          "Trades": 13,
+          "Net_Rupees": -162.0,
+          "Avg_Rupees": -12.46
+        },
+        {
+          "Month": "2023-12",
+          "Trades": 66,
+          "Net_Rupees": -715.73,
+          "Avg_Rupees": -10.84
+        }
+      ]
+    },
+    "CANDLE_HEURISTIC": {
+      "trades": 789,
+      "trading_days": 132,
+      "trades_per_day": 5.9772727272727275,
+      "win_rate_pct": 24.461343472750315,
+      "avg_net_return_pct": -0.03764598390607962,
+      "avg_net_rupees": -15.410668857049151,
+      "avg_winner_rupees": 23.847587177494653,
+      "avg_loser_rupees": -28.218185275199076,
+      "total_net_rupees": -12159.01772821178,
+      "profit_factor": 0.2745909556004593,
+      "max_drawdown_rupees": -12459.8667488931,
+      "final_trading_capital": 33238.39794653178,
+      "final_profit_wallet": 4602.584325256467,
+      "exit_reasons": {
+        "HARD_STOP": 510,
+        "TRAIL_EXIT": 279
+      },
+      "trailing_activated_pct": 35.361216730038024,
+      "exited_in_entry_bar_pct": 74.77820025348542,
+      "avg_holding_bars": 1.3244613434727504,
+      "by_side": {
+        "LONG": {
+          "trades": 347,
+          "win_rate_pct": 22.76657060518732,
+          "total_net_rupees": -5288.645716138947
+        },
+        "SHORT": {
+          "trades": 442,
+          "win_rate_pct": 25.791855203619914,
+          "total_net_rupees": -6870.372012072834
+        }
+      },
+      "monthly": [
+        {
+          "Month": "2023-01",
+          "Trades": 129,
+          "Net_Rupees": -2324.0,
+          "Avg_Rupees": -18.02
+        },
+        {
+          "Month": "2023-02",
+          "Trades": 112,
+          "Net_Rupees": -1920.33,
+          "Avg_Rupees": -17.15
+        },
+        {
+          "Month": "2023-03",
+          "Trades": 135,
+          "Net_Rupees": -2199.95,
+          "Avg_Rupees": -16.3
+        },
+        {
+          "Month": "2023-04",
+          "Trades": 42,
+          "Net_Rupees": -860.08,
+          "Avg_Rupees": -20.48
+        },
+        {
+          "Month": "2023-05",
+          "Trades": 50,
+          "Net_Rupees": -727.88,
+          "Avg_Rupees": -14.56
+        },
+        {
+          "Month": "2023-06",
+          "Trades": 34,
+          "Net_Rupees": -478.59,
+          "Avg_Rupees": -14.08
+        },
+        {
+          "Month": "2023-07",
+          "Trades": 66,
+          "Net_Rupees": -610.29,
+          "Avg_Rupees": -9.25
+        },
+        {
+          "Month": "2023-08",
+          "Trades": 61,
+          "Net_Rupees": -1124.81,
+          "Avg_Rupees": -18.44
+        },
+        {
+          "Month": "2023-09",
+          "Trades": 43,
+          "Net_Rupees": -630.25,
+          "Avg_Rupees": -14.66
+        },
+        {
+          "Month": "2023-10",
+          "Trades": 45,
+          "Net_Rupees": -533.45,
+          "Avg_Rupees": -11.85
+        },
+        {
+          "Month": "2023-11",
+          "Trades": 11,
+          "Net_Rupees": -143.35,
+          "Avg_Rupees": -13.03
+        },
+        {
+          "Month": "2023-12",
+          "Trades": 61,
+          "Net_Rupees": -606.05,
+          "Avg_Rupees": -9.94
+        }
+      ]
+    }
+  },
+  "verdict": "LOSING_ALL_PATHS"
+}

@@ -1,0 +1,76 @@
+{
+  "phase": "14D",
+  "name": "MODEL ERROR-MAPPING / CONTRARIAN EVIDENCE ENGINE V1",
+  "config_hash": "22985dc8b4eb",
+  "objective": "Test broad, chronological FOLLOW versus REVERSE behavior without retraining base models or using verification/forward outcomes for rule selection.",
+  "chronology": {
+    "discovery": [
+      "2023-01-01 00:00:00",
+      "2023-08-31 23:59:59"
+    ],
+    "calibration": [
+      "2023-09-01 00:00:00",
+      "2023-09-30 23:59:59"
+    ],
+    "verification": [
+      "2023-10-01 00:00:00",
+      "2023-12-31 23:59:59"
+    ],
+    "forward": [
+      "2024-01-01 00:00:00",
+      "2024-03-27 23:59:59"
+    ]
+  },
+  "rules": {
+    "min_discovery_trades": 30,
+    "min_calibration_trades": 15,
+    "half_min_trades": 10,
+    "discovery_min_net_bps": 0.5,
+    "calibration_min_net_bps": 0.0,
+    "confidence_bins": [
+      -Infinity,
+      0.5,
+      0.65,
+      Infinity
+    ],
+    "margin_bins": [
+      -Infinity,
+      0.1,
+      0.2,
+      Infinity
+    ],
+    "persistence": [
+      "P1",
+      "P2_PLUS"
+    ]
+  },
+  "economics": {
+    "notional_rupees": 100000.0,
+    "costs_bps": [
+      0.0,
+      2.5,
+      5.0,
+      10.0,
+      15.0,
+      20.0
+    ],
+    "capture_fractions": [
+      0.3,
+      0.35,
+      0.4
+    ],
+    "entry": "next 5-minute OPEN",
+    "exit": "6th future 5-minute CLOSE",
+    "horizon_bars": 6
+  },
+  "track_a_common_rows": 2374,
+  "track_a_frozen_rules": 0,
+  "track_b_frozen_rules": 0,
+  "outputs": {
+    "action_error_map": ".\\experiments\\phase14d\\phase14d_action_error_map_5bps.csv",
+    "frozen_rules": ".\\experiments\\phase14d\\phase14d_frozen_rules.csv",
+    "frozen_results": ".\\experiments\\phase14d\\phase14d_frozen_rule_results.csv",
+    "opportunity_cost": ".\\experiments\\phase14d\\phase14d_opportunity_cost.csv",
+    "baselines": ".\\experiments\\phase14d\\phase14d_baselines.csv"
+  }
+}

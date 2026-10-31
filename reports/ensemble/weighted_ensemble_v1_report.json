@@ -1,0 +1,379 @@
+{
+  "phase": "13A",
+  "version": "Weighted Ensemble V1",
+  "models": [
+    "XGB",
+    "LGB",
+    "CAT",
+    "LSTM",
+    "TRF"
+  ],
+  "classes": [
+    "DOWN",
+    "NEUTRAL",
+    "UP"
+  ],
+  "common_universe": {
+    "rows": 2374,
+    "start": "2023-01-02 14:10:00",
+    "end": "2023-12-29 14:55:00"
+  },
+  "meta_training": {
+    "start": "2023-01-01 00:00:00",
+    "end": "2023-09-30 23:59:59",
+    "rows": 1784
+  },
+  "verification": {
+    "start": "2023-10-01 00:00:00",
+    "end": "2023-12-31 23:59:59",
+    "rows": 590
+  },
+  "historical_weights": {
+    "XGB": 0.20107950742528205,
+    "LGB": 0.2039363422989328,
+    "CAT": 0.19836954233576926,
+    "LSTM": 0.1960891564862628,
+    "TRF": 0.20052545145375306
+  },
+  "mistake_layer": {
+    "version": "V2 leak-safe",
+    "frozen_hgb_threshold": 0.6074396898807816,
+    "overlap_rows": 590,
+    "high_risk_rows": 26,
+    "integration": "global directional probability shrinkage toward NEUTRAL"
+  },
+  "methods": [
+    "Individual model baselines",
+    "Equal_Blend",
+    "Historical_Weighted",
+    "Logistic_Meta",
+    "Mistake_Adjusted"
+  ],
+  "results": [
+    {
+      "Method": "XGB",
+      "n": 590,
+      "accuracy": 0.576271186440678,
+      "balanced_accuracy": 0.37134293073163976,
+      "macro_f1": 0.36952611372116023,
+      "log_loss": 0.9270924310847973,
+      "actual_distribution": {
+        "DOWN": 0.15084745762711865,
+        "NEUTRAL": 0.6389830508474577,
+        "UP": 0.21016949152542372
+      },
+      "prediction_distribution": {
+        "DOWN": 0.07966101694915254,
+        "NEUTRAL": 0.7779661016949152,
+        "UP": 0.1423728813559322
+      },
+      "confusion_matrix": [
+        [
+          14,
+          61,
+          14
+        ],
+        [
+          15,
+          309,
+          53
+        ],
+        [
+          18,
+          89,
+          17
+        ]
+      ]
+    },
+    {
+      "Method": "LGB",
+      "n": 590,
+      "accuracy": 0.5644067796610169,
+      "balanced_accuracy": 0.35657028248359435,
+      "macro_f1": 0.35220047418790995,
+      "log_loss": 0.9346054805848896,
+      "actual_distribution": {
+        "DOWN": 0.15084745762711865,
+        "NEUTRAL": 0.6389830508474577,
+        "UP": 0.21016949152542372
+      },
+      "prediction_distribution": {
+        "DOWN": 0.07966101694915254,
+        "NEUTRAL": 0.7576271186440678,
+        "UP": 0.16271186440677965
+      },
+      "confusion_matrix": [
+        [
+          11,
+          58,
+          20
+        ],
+        [
+          13,
+          305,
+          59
+        ],
+        [
+          23,
+          84,
+          17
+        ]
+      ]
+    },
+    {
+      "Method": "CAT",
+      "n": 590,
+      "accuracy": 0.6288135593220339,
+      "balanced_accuracy": 0.39527057016839673,
+      "macro_f1": 0.3895939409153149,
+      "log_loss": 0.9142220994650816,
+      "actual_distribution": {
+        "DOWN": 0.15084745762711865,
+        "NEUTRAL": 0.6389830508474577,
+        "UP": 0.21016949152542372
+      },
+      "prediction_distribution": {
+        "DOWN": 0.0576271186440678,
+        "NEUTRAL": 0.8220338983050848,
+        "UP": 0.12033898305084746
+      },
+      "confusion_matrix": [
+        [
+          9,
+          59,
+          21
+        ],
+        [
+          11,
+          339,
+          27
+        ],
+        [
+          14,
+          87,
+          23
+        ]
+      ]
+    },
+    {
+      "Method": "LSTM",
+      "n": 590,
+      "accuracy": 0.6440677966101694,
+      "balanced_accuracy": 0.3790292937285225,
+      "macro_f1": 0.3557943721494019,
+      "log_loss": 0.9504150967305417,
+      "actual_distribution": {
+        "DOWN": 0.15084745762711865,
+        "NEUTRAL": 0.6389830508474577,
+        "UP": 0.21016949152542372
+      },
+      "prediction_distribution": {
+        "DOWN": 0.05593220338983051,
+        "NEUTRAL": 0.9067796610169492,
+        "UP": 0.03728813559322034
+      },
+      "confusion_matrix": [
+        [
+          10,
+          71,
+          8
+        ],
+        [
+          9,
+          362,
+          6
+        ],
+        [
+          14,
+          102,
+          8
+        ]
+      ]
+    },
+    {
+      "Method": "TRF",
+      "n": 590,
+      "accuracy": 0.6372881355932203,
+      "balanced_accuracy": 0.45835027811881,
+      "macro_f1": 0.46391783823421,
+      "log_loss": 0.9753467475992696,
+      "actual_distribution": {
+        "DOWN": 0.15084745762711865,
+        "NEUTRAL": 0.6389830508474577,
+        "UP": 0.21016949152542372
+      },
+      "prediction_distribution": {
+        "DOWN": 0.08983050847457627,
+        "NEUTRAL": 0.7322033898305085,
+        "UP": 0.17796610169491525
+      },
+      "confusion_matrix": [
+        [
+          15,
+          54,
+          20
+        ],
+        [
+          23,
+          315,
+          39
+        ],
+        [
+          15,
+          63,
+          46
+        ]
+      ]
+    },
+    {
+      "Method": "Equal_Blend",
+      "n": 590,
+      "accuracy": 0.6338983050847458,
+      "balanced_accuracy": 0.3845482464109902,
+      "macro_f1": 0.37156081841757854,
+      "log_loss": 0.9305139353108793,
+      "actual_distribution": {
+        "DOWN": 0.15084745762711865,
+        "NEUTRAL": 0.6389830508474577,
+        "UP": 0.21016949152542372
+      },
+      "prediction_distribution": {
+        "DOWN": 0.06610169491525424,
+        "NEUTRAL": 0.8576271186440678,
+        "UP": 0.07627118644067797
+      },
+      "confusion_matrix": [
+        [
+          10,
+          63,
+          16
+        ],
+        [
+          12,
+          350,
+          15
+        ],
+        [
+          17,
+          93,
+          14
+        ]
+      ]
+    },
+    {
+      "Method": "Historical_Weighted",
+      "n": 590,
+      "accuracy": 0.6305084745762712,
+      "balanced_accuracy": 0.3809759010700131,
+      "macro_f1": 0.36686104335453146,
+      "log_loss": 0.9304977666373853,
+      "actual_distribution": {
+        "DOWN": 0.15084745762711865,
+        "NEUTRAL": 0.6389830508474577,
+        "UP": 0.21016949152542372
+      },
+      "prediction_distribution": {
+        "DOWN": 0.06610169491525424,
+        "NEUTRAL": 0.8576271186440678,
+        "UP": 0.07627118644067797
+      },
+      "confusion_matrix": [
+        [
+          10,
+          63,
+          16
+        ],
+        [
+          12,
+          349,
+          16
+        ],
+        [
+          17,
+          94,
+          13
+        ]
+      ]
+    },
+    {
+      "Method": "Logistic_Meta",
+      "n": 590,
+      "accuracy": 0.6508474576271186,
+      "balanced_accuracy": 0.37124767139390125,
+      "macro_f1": 0.337103465474555,
+      "log_loss": 0.8738017977487397,
+      "actual_distribution": {
+        "DOWN": 0.15084745762711865,
+        "NEUTRAL": 0.6389830508474577,
+        "UP": 0.21016949152542372
+      },
+      "prediction_distribution": {
+        "DOWN": 0.003389830508474576,
+        "NEUTRAL": 0.9322033898305084,
+        "UP": 0.06440677966101695
+      },
+      "confusion_matrix": [
+        [
+          1,
+          76,
+          12
+        ],
+        [
+          0,
+          367,
+          10
+        ],
+        [
+          1,
+          107,
+          16
+        ]
+      ]
+    },
+    {
+      "Method": "Mistake_Adjusted",
+      "n": 590,
+      "accuracy": 0.6389830508474577,
+      "balanced_accuracy": 0.3333333333333333,
+      "macro_f1": 0.259910375732506,
+      "log_loss": 0.9148151820950504,
+      "actual_distribution": {
+        "DOWN": 0.15084745762711865,
+        "NEUTRAL": 0.6389830508474577,
+        "UP": 0.21016949152542372
+      },
+      "prediction_distribution": {
+        "DOWN": 0.0,
+        "NEUTRAL": 1.0,
+        "UP": 0.0
+      },
+      "confusion_matrix": [
+        [
+          0,
+          89,
+          0
+        ],
+        [
+          0,
+          377,
+          0
+        ],
+        [
+          0,
+          124,
+          0
+        ]
+      ]
+    }
+  ],
+  "limitations": [
+    "Five-model common universe only.",
+    "LSTM and Transformer begin later in the session.",
+    "Mistake Layer V2 does not provide per-model mistake probabilities.",
+    "Mistake-adjusted V1 therefore uses a global confidence gate.",
+    "No transaction costs.",
+    "No slippage.",
+    "No trading profitability claim.",
+    "Verification period is not used for weight fitting."
+  ]
+}

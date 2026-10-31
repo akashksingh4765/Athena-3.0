@@ -1,0 +1,440 @@
+{
+  "project": "Athena 3.0",
+  "analysis": "Chronological comparison of XGBoost, LightGBM and CatBoost OOS predictions.",
+  "years": [
+    "2021",
+    "2022",
+    "2023",
+    "2024_partial"
+  ],
+  "models": [
+    "XGBoost",
+    "LightGBM",
+    "CatBoost"
+  ],
+  "classes": [
+    "DOWN",
+    "NEUTRAL",
+    "UP"
+  ],
+  "individual_metrics": [
+    {
+      "Year": "2021",
+      "Model": "XGBoost",
+      "Rows": 10022,
+      "Accuracy": 0.4861305128716823,
+      "Balanced_Accuracy": 0.48418357632436776,
+      "LogLoss": 0.9893810146748391
+    },
+    {
+      "Year": "2021",
+      "Model": "LightGBM",
+      "Rows": 10022,
+      "Accuracy": 0.48223907403711835,
+      "Balanced_Accuracy": 0.4820698052046459,
+      "LogLoss": 0.990051640046962
+    },
+    {
+      "Year": "2021",
+      "Model": "CatBoost",
+      "Rows": 10022,
+      "Accuracy": 0.4869287567351826,
+      "Balanced_Accuracy": 0.4849834979123547,
+      "LogLoss": 0.9842139285443631
+    },
+    {
+      "Year": "2022",
+      "Model": "XGBoost",
+      "Rows": 10061,
+      "Accuracy": 0.4914024450849816,
+      "Balanced_Accuracy": 0.4912212827649122,
+      "LogLoss": 0.9707014535716503
+    },
+    {
+      "Year": "2022",
+      "Model": "LightGBM",
+      "Rows": 10061,
+      "Accuracy": 0.4890169963224332,
+      "Balanced_Accuracy": 0.48880419523456037,
+      "LogLoss": 0.9704755962962681
+    },
+    {
+      "Year": "2022",
+      "Model": "CatBoost",
+      "Rows": 10061,
+      "Accuracy": 0.48842063413179604,
+      "Balanced_Accuracy": 0.4881343313601632,
+      "LogLoss": 0.9662473578564245
+    },
+    {
+      "Year": "2023",
+      "Model": "XGBoost",
+      "Rows": 9836,
+      "Accuracy": 0.6274908499389996,
+      "Balanced_Accuracy": 0.41850046827513426,
+      "LogLoss": 0.8410315984715475
+    },
+    {
+      "Year": "2023",
+      "Model": "LightGBM",
+      "Rows": 9836,
+      "Accuracy": 0.6234241561610411,
+      "Balanced_Accuracy": 0.4147765284980207,
+      "LogLoss": 0.8425016674577057
+    },
+    {
+      "Year": "2023",
+      "Model": "CatBoost",
+      "Rows": 9836,
+      "Accuracy": 0.6301342008946726,
+      "Balanced_Accuracy": 0.4153157475940639,
+      "LogLoss": 0.8391013842274277
+    },
+    {
+      "Year": "2024",
+      "Model": "XGBoost",
+      "Rows": 2419,
+      "Accuracy": 0.4989665150888797,
+      "Balanced_Accuracy": 0.39962057763405184,
+      "LogLoss": 0.978701424951854
+    },
+    {
+      "Year": "2024",
+      "Model": "LightGBM",
+      "Rows": 2419,
+      "Accuracy": 0.5130219098801158,
+      "Balanced_Accuracy": 0.4143616082004739,
+      "LogLoss": 0.9803175107767796
+    },
+    {
+      "Year": "2024",
+      "Model": "CatBoost",
+      "Rows": 2419,
+      "Accuracy": 0.5274906986357999,
+      "Balanced_Accuracy": 0.4153901942960952,
+      "LogLoss": 0.9643711706808917
+    }
+  ],
+  "pairwise_agreement": [
+    {
+      "Year": "2021",
+      "Model_A": "XGBoost",
+      "Model_B": "LightGBM",
+      "Agreement": 0.8807623228896427,
+      "Disagreement": 0.11923767711035727
+    },
+    {
+      "Year": "2021",
+      "Model_A": "XGBoost",
+      "Model_B": "CatBoost",
+      "Agreement": 0.7912592296946718,
+      "Disagreement": 0.20874077030532823
+    },
+    {
+      "Year": "2021",
+      "Model_A": "LightGBM",
+      "Model_B": "CatBoost",
+      "Agreement": 0.7855717421672321,
+      "Disagreement": 0.21442825783276787
+    },
+    {
+      "Year": "2022",
+      "Model_A": "XGBoost",
+      "Model_B": "LightGBM",
+      "Agreement": 0.8823178610476096,
+      "Disagreement": 0.11768213895239044
+    },
+    {
+      "Year": "2022",
+      "Model_A": "XGBoost",
+      "Model_B": "CatBoost",
+      "Agreement": 0.8256634529370838,
+      "Disagreement": 0.17433654706291624
+    },
+    {
+      "Year": "2022",
+      "Model_A": "LightGBM",
+      "Model_B": "CatBoost",
+      "Agreement": 0.83470827949508,
+      "Disagreement": 0.16529172050492003
+    },
+    {
+      "Year": "2023",
+      "Model_A": "XGBoost",
+      "Model_B": "LightGBM",
+      "Agreement": 0.942456283041887,
+      "Disagreement": 0.057543716958113
+    },
+    {
+      "Year": "2023",
+      "Model_A": "XGBoost",
+      "Model_B": "CatBoost",
+      "Agreement": 0.9208011386742578,
+      "Disagreement": 0.07919886132574216
+    },
+    {
+      "Year": "2023",
+      "Model_A": "LightGBM",
+      "Model_B": "CatBoost",
+      "Agreement": 0.9152094347295648,
+      "Disagreement": 0.08479056527043516
+    },
+    {
+      "Year": "2024",
+      "Model_A": "XGBoost",
+      "Model_B": "LightGBM",
+      "Agreement": 0.8772219925589086,
+      "Disagreement": 0.12277800744109135
+    },
+    {
+      "Year": "2024",
+      "Model_A": "XGBoost",
+      "Model_B": "CatBoost",
+      "Agreement": 0.8131459280694502,
+      "Disagreement": 0.18685407193054981
+    },
+    {
+      "Year": "2024",
+      "Model_A": "LightGBM",
+      "Model_B": "CatBoost",
+      "Agreement": 0.8346424142207524,
+      "Disagreement": 0.16535758577924764
+    }
+  ],
+  "probability_correlation": [
+    {
+      "Year": "2021",
+      "Model_A": "XGBoost",
+      "Model_B": "LightGBM",
+      "Correlation_DOWN": 0.932167314040981,
+      "Correlation_NEUTRAL": 0.9872493632214748,
+      "Correlation_UP": 0.9653467146853723,
+      "Mean_Correlation": 0.9615877973159428
+    },
+    {
+      "Year": "2021",
+      "Model_A": "XGBoost",
+      "Model_B": "CatBoost",
+      "Correlation_DOWN": 0.8941197869939634,
+      "Correlation_NEUTRAL": 0.9707310787338067,
+      "Correlation_UP": 0.9348292289827643,
+      "Mean_Correlation": 0.9332266982368448
+    },
+    {
+      "Year": "2021",
+      "Model_A": "LightGBM",
+      "Model_B": "CatBoost",
+      "Correlation_DOWN": 0.8919164415115185,
+      "Correlation_NEUTRAL": 0.9646724089404138,
+      "Correlation_UP": 0.9262766641903449,
+      "Mean_Correlation": 0.9276218382140925
+    },
+    {
+      "Year": "2022",
+      "Model_A": "XGBoost",
+      "Model_B": "LightGBM",
+      "Correlation_DOWN": 0.9733822914738363,
+      "Correlation_NEUTRAL": 0.9913994762351842,
+      "Correlation_UP": 0.956967084384398,
+      "Mean_Correlation": 0.9739162840311395
+    },
+    {
+      "Year": "2022",
+      "Model_A": "XGBoost",
+      "Model_B": "CatBoost",
+      "Correlation_DOWN": 0.951336379696526,
+      "Correlation_NEUTRAL": 0.9872587886397672,
+      "Correlation_UP": 0.9387684665245393,
+      "Mean_Correlation": 0.9591212116202774
+    },
+    {
+      "Year": "2022",
+      "Model_A": "LightGBM",
+      "Model_B": "CatBoost",
+      "Correlation_DOWN": 0.9575427955935902,
+      "Correlation_NEUTRAL": 0.9829079064250952,
+      "Correlation_UP": 0.9344902862981845,
+      "Mean_Correlation": 0.9583136627722899
+    },
+    {
+      "Year": "2023",
+      "Model_A": "XGBoost",
+      "Model_B": "LightGBM",
+      "Correlation_DOWN": 0.982732169604799,
+      "Correlation_NEUTRAL": 0.9913369041519053,
+      "Correlation_UP": 0.9712536456813113,
+      "Mean_Correlation": 0.981774239812672
+    },
+    {
+      "Year": "2023",
+      "Model_A": "XGBoost",
+      "Model_B": "CatBoost",
+      "Correlation_DOWN": 0.9704077181140098,
+      "Correlation_NEUTRAL": 0.9841871302288723,
+      "Correlation_UP": 0.943749411395049,
+      "Mean_Correlation": 0.966114753245977
+    },
+    {
+      "Year": "2023",
+      "Model_A": "LightGBM",
+      "Model_B": "CatBoost",
+      "Correlation_DOWN": 0.9676171890636733,
+      "Correlation_NEUTRAL": 0.9828735839477152,
+      "Correlation_UP": 0.9532037666912397,
+      "Mean_Correlation": 0.967898179900876
+    },
+    {
+      "Year": "2024",
+      "Model_A": "XGBoost",
+      "Model_B": "LightGBM",
+      "Correlation_DOWN": 0.957300225338459,
+      "Correlation_NEUTRAL": 0.9910829198208738,
+      "Correlation_UP": 0.9751021679033477,
+      "Mean_Correlation": 0.9744951043542268
+    },
+    {
+      "Year": "2024",
+      "Model_A": "XGBoost",
+      "Model_B": "CatBoost",
+      "Correlation_DOWN": 0.9359379840604546,
+      "Correlation_NEUTRAL": 0.9678306760550439,
+      "Correlation_UP": 0.9304189100421111,
+      "Mean_Correlation": 0.9447291900525365
+    },
+    {
+      "Year": "2024",
+      "Model_A": "LightGBM",
+      "Model_B": "CatBoost",
+      "Correlation_DOWN": 0.9582214441153155,
+      "Correlation_NEUTRAL": 0.9704645972980042,
+      "Correlation_UP": 0.9300566522534748,
+      "Mean_Correlation": 0.9529142312222648
+    }
+  ],
+  "majority_vote": [
+    {
+      "Year": "2021",
+      "Rows": 10022,
+      "Strict_Majority_Rows": 9918,
+      "Coverage": 0.9896228297744961,
+      "Tie_Rate": 0.010377170225503884,
+      "Strict_Majority_Accuracy": 0.49011897559991935
+    },
+    {
+      "Year": "2022",
+      "Rows": 10061,
+      "Strict_Majority_Rows": 10022,
+      "Coverage": 0.9961236457608588,
+      "Tie_Rate": 0.003876354239141233,
+      "Strict_Majority_Accuracy": 0.49281580522849733
+    },
+    {
+      "Year": "2023",
+      "Rows": 9836,
+      "Strict_Majority_Rows": 9805,
+      "Coverage": 0.9968483123220822,
+      "Tie_Rate": 0.003151687677917847,
+      "Strict_Majority_Accuracy": 0.6271290158082611
+    },
+    {
+      "Year": "2024",
+      "Rows": 2419,
+      "Strict_Majority_Rows": 2394,
+      "Coverage": 0.989665150888797,
+      "Tie_Rate": 0.01033484911120297,
+      "Strict_Majority_Accuracy": 0.5146198830409356
+    }
+  ],
+  "directional_consensus": [
+    {
+      "Year": "2021",
+      "Consensus": "DOWN",
+      "Rows": 1016,
+      "Coverage": 0.10137697066453802,
+      "Accuracy": 0.4704724409448819
+    },
+    {
+      "Year": "2021",
+      "Consensus": "UP",
+      "Rows": 4600,
+      "Coverage": 0.4589902215126721,
+      "Accuracy": 0.40630434782608693
+    },
+    {
+      "Year": "2021",
+      "Consensus": "NEUTRAL",
+      "Rows": 4302,
+      "Coverage": 0.42925563759728597,
+      "Accuracy": 0.5843793584379359
+    },
+    {
+      "Year": "2022",
+      "Consensus": "DOWN",
+      "Rows": 3607,
+      "Coverage": 0.35851307027134477,
+      "Accuracy": 0.46492930413085665
+    },
+    {
+      "Year": "2022",
+      "Consensus": "UP",
+      "Rows": 1615,
+      "Coverage": 0.1605208229798231,
+      "Accuracy": 0.4086687306501548
+    },
+    {
+      "Year": "2022",
+      "Consensus": "NEUTRAL",
+      "Rows": 4800,
+      "Coverage": 0.4770897525096909,
+      "Accuracy": 0.5420833333333334
+    },
+    {
+      "Year": "2023",
+      "Consensus": "DOWN",
+      "Rows": 1285,
+      "Coverage": 0.13064253761691744,
+      "Accuracy": 0.34396887159533074
+    },
+    {
+      "Year": "2023",
+      "Consensus": "UP",
+      "Rows": 711,
+      "Coverage": 0.07228548190321268,
+      "Accuracy": 0.2770745428973277
+    },
+    {
+      "Year": "2023",
+      "Consensus": "NEUTRAL",
+      "Rows": 7809,
+      "Coverage": 0.793920292801952,
+      "Accuracy": 0.7055961070559611
+    },
+    {
+      "Year": "2024",
+      "Consensus": "DOWN",
+      "Rows": 395,
+      "Coverage": 0.16329061595700703,
+      "Accuracy": 0.3569620253164557
+    },
+    {
+      "Year": "2024",
+      "Consensus": "UP",
+      "Rows": 293,
+      "Coverage": 0.12112443158329889,
+      "Accuracy": 0.34812286689419797
+    },
+    {
+      "Year": "2024",
+      "Consensus": "NEUTRAL",
+      "Rows": 1706,
+      "Coverage": 0.7052501033484911,
+      "Accuracy": 0.5797186400937866
+    }
+  ],
+  "notes": [
+    "2024 is a partial OOS period.",
+    "This analysis measures predictive agreement and classification performance only.",
+    "No trading profitability conclusion is drawn from these metrics.",
+    "No ensemble weights are learned in this phase."
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "config_hash": "6bf52ebd06b3",
+  "phase": "15_V2",
+  "model": "TRF",
+  "horizon_bars": 6,
+  "discovery": [
+    "2023-01-01",
+    "2023-09-30"
+  ],
+  "verification": [
+    "2023-10-01",
+    "2023-12-31"
+  ],
+  "forward": [
+    "2024-01-01",
+    "2024-12-31"
+  ],
+  "capacity_history_end": "2022-12-31",
+  "v_enter_z": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "min_net_edge_bps": [
+    0.0,
+    5.0,
+    10.0
+  ],
+  "max_wait_bars": [
+    2,
+    5
+  ],
+  "capacity_quantile": "Q75",
+  "cancel_z": 1.0,
+  "momentum_exit_z": 1.0,
+  "min_hold": 1,
+  "max_hold": 6,
+  "capacity_target": true,
+  "protective_stop_pct": 0.3,
+  "trail_pct": null,
+  "rv_lookback": 12,
+  "prior_move_bars": 3,
+  "capacity_min_group": 200,
+  "wait_fixed": {
+    "window": 3,
+    "z": 1.0,
+    "cap_gate": true,
+    "buffer": 5.0
+  },
+  "cost_bps": 5.0,
+  "costs_bps": [
+    0.0,
+    2.5,
+    5.0,
+    10.0,
+    15.0,
+    20.0
+  ],
+  "capital": 50000.0,
+  "capital_mode": "PRINCIPAL_ONLY",
+  "leverage": 1.0,
+  "last_entry": "15:10",
+  "square_off": "15:15",
+  "paths": [
+    "LOW_BEFORE_HIGH",
+    "HIGH_BEFORE_LOW",
+    "CANDLE_HEURISTIC"
+  ],
+  "n_random": 30,
+  "random_pctl": 95,
+  "gates": [
+    40,
+    15,
+    0.5,
+    0.05,
+    30,
+    2
+  ],
+  "regime": [
+    1.0,
+    3
+  ],
+  "adaptive": [
+    40,
+    30,
+    2.0,
+    20,
+    "DIAGNOSTIC_ONLY"
+  ],
+  "seed": 1516,
+  "volume_used": false
+}

@@ -1,0 +1,115 @@
+{
+  "model": "LSTM_V2_SCALED",
+  "input_dataset": ".\\data\\processed\\nifty\\nifty50_lstm_sequence_v2_scaled.npz",
+  "model_file": ".\\models\\lstm\\lstm_v2_scaled.keras",
+  "prediction_file": ".\\experiments\\lstm\\lstm_v2_scaled_oos_2023_predictions.csv",
+  "sequence_length": 32,
+  "feature_count": 72,
+  "lstm_units": 64,
+  "dense_units": 32,
+  "dropout": 0.2,
+  "learning_rate": 0.001,
+  "batch_size": 128,
+  "max_epochs": 100,
+  "early_stopping_patience": 10,
+  "random_seed": 42,
+  "scaling": {
+    "method": "standardization",
+    "fit_period": "2015-2022",
+    "validation_data_used_for_scaler": false
+  },
+  "train_start": "2015-01-12 14:10:00",
+  "train_end": "2022-12-30 14:55:00",
+  "validation_start": "2023-01-02 14:10:00",
+  "validation_end": "2023-12-29 14:55:00",
+  "train_rows": 18641,
+  "validation_rows": 2374,
+  "best_epoch": 5,
+  "best_validation_loss": 1.0142184495925903,
+  "accuracy": 0.491575400168492,
+  "balanced_accuracy": 0.4239423422101724,
+  "log_loss": 1.0142183822678734,
+  "majority_baseline_accuracy": 0.4911541701769166,
+  "majority_baseline_class": "NEUTRAL",
+  "confusion_matrix": [
+    [
+      250,
+      248,
+      29
+    ],
+    [
+      213,
+      899,
+      54
+    ],
+    [
+      316,
+      347,
+      18
+    ]
+  ],
+  "classification_report": {
+    "DOWN": {
+      "precision": 0.3209242618741977,
+      "recall": 0.47438330170777987,
+      "f1-score": 0.38284839203675347,
+      "support": 527.0
+    },
+    "NEUTRAL": {
+      "precision": 0.6017402945113789,
+      "recall": 0.7710120068610634,
+      "f1-score": 0.6759398496240602,
+      "support": 1166.0
+    },
+    "UP": {
+      "precision": 0.1782178217821782,
+      "recall": 0.02643171806167401,
+      "f1-score": 0.04603580562659847,
+      "support": 681.0
+    },
+    "accuracy": 0.491575400168492,
+    "macro avg": {
+      "precision": 0.3669607927225849,
+      "recall": 0.4239423422101724,
+      "f1-score": 0.36827468242913736,
+      "support": 2374.0
+    },
+    "weighted avg": {
+      "precision": 0.4179117969846813,
+      "recall": 0.491575400168492,
+      "f1-score": 0.430184225314548,
+      "support": 2374.0
+    }
+  },
+  "prediction_distribution": {
+    "DOWN": {
+      "count": 779,
+      "percentage": 32.81381634372367
+    },
+    "NEUTRAL": {
+      "count": 1494,
+      "percentage": 62.93176074136478
+    },
+    "UP": {
+      "count": 101,
+      "percentage": 4.254422914911542
+    }
+  },
+  "probability_distribution": {
+    "DOWN_mean": 0.32058340311050415,
+    "NEUTRAL_mean": 0.3660429120063782,
+    "UP_mean": 0.3133736848831177,
+    "DOWN_max": 0.6416692137718201,
+    "NEUTRAL_max": 0.6558670401573181,
+    "UP_max": 0.5173901915550232
+  },
+  "validation": {
+    "chronological_split": true,
+    "shuffle": false,
+    "no_nan_input": true,
+    "no_inf_input": true,
+    "three_classes": true,
+    "train_before_validation": true,
+    "scaler_fit_only_on_train": true
+  }
+}

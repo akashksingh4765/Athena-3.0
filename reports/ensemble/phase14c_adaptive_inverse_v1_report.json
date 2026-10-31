@@ -1,0 +1,135 @@
+{
+  "phase": "14C",
+  "name": "Adaptive Follow Reverse No-Trade Engine V1",
+  "config_hash": "c6085f37f874",
+  "execution": {
+    "signal_after_close": true,
+    "entry": "next_5m_open",
+    "exit": "6th_future_5m_close",
+    "horizon_bars": 6,
+    "same_session_only": true,
+    "one_position_at_a_time": true
+  },
+  "tracks": {
+    "TRACK_A_FIVE_MODEL": {
+      "models": [
+        "XGB",
+        "LGB",
+        "CAT",
+        "LSTM",
+        "TRF"
+      ],
+      "model_weights": {
+        "CAT": 0.2,
+        "LGB": 0.2,
+        "LSTM": 0.2,
+        "TRF": 0.2,
+        "XGB": 0.2
+      },
+      "periods": {
+        "DISCOVERY": {
+          "rows": 6557,
+          "trades": 0,
+          "no_trade": 6557
+        },
+        "CALIBRATION": {
+          "rows": 820,
+          "trades": 0,
+          "no_trade": 820
+        },
+        "VERIFY": {
+          "rows": 2459,
+          "trades": 0,
+          "no_trade": 2459
+        },
+        "FORWARD": {
+          "rows": 2419,
+          "trades": 0,
+          "no_trade": 2419
+        }
+      },
+      "eligible_rules": 0,
+      "total_rules": 72
+    },
+    "TRACK_B_TREE_TRANSFER": {
+      "models": [
+        "XGB",
+        "LGB",
+        "CAT"
+      ],
+      "model_weights": {
+        "CAT": 0.3333333333333333,
+        "LGB": 0.3333333333333333,
+        "XGB": 0.3333333333333333
+      },
+      "periods": {
+        "DISCOVERY": {
+          "rows": 6557,
+          "trades": 0,
+          "no_trade": 6557
+        },
+        "CALIBRATION": {
+          "rows": 820,
+          "trades": 0,
+          "no_trade": 820
+        },
+        "VERIFY": {
+          "rows": 2459,
+          "trades": 0,
+          "no_trade": 2459
+        },
+        "FORWARD": {
+          "rows": 2419,
+          "trades": 0,
+          "no_trade": 2419
+        }
+      },
+      "eligible_rules": 0,
+      "total_rules": 50
+    }
+  },
+  "costs_bps": [
+    0.0,
+    2.5,
+    5.0,
+    10.0,
+    15.0,
+    20.0
+  ],
+  "capture_diagnostics": [
+    0.3,
+    0.35,
+    0.4
+  ],
+  "rules": {
+    "actions": [
+      "FOLLOW",
+      "REVERSE",
+      "NO_TRADE"
+    ],
+    "neutral_is_no_trade": true,
+    "min_discovery_trades": 25,
+    "min_half_trades": 10,
+    "min_calibration_trades": 15,
+    "min_discovery_mean_net_bps": 0.25,
+    "min_calibration_mean_net_bps": 0.0,
+    "max_calibration_drop_bps": 4.0
+  },
+  "important_limitations": [
+    "Rules are learned only from chronological 2023 discovery/calibration data.",
+    "Q4 2023 is verification and is not used to select rules.",
+    "Q1 2024 is forward only for XGB/LGB/CAT because LSTM/Transformer 2024 predictions are unavailable.",
+    "30/35/40 percent capture is a stress-test haircut, not a claim of executable intrabar partial exits.",
+    "No synthetic market data is created.",
+    "The engine does not guarantee profitability and does not assume reversal is beneficial.",
+    "A rule must show positive discovery halves and positive calibration economics before it can trade."
+  ],
+  "output_files": {
+    "report": ".\\reports\\ensemble\\phase14c_adaptive_inverse_v1_report.json",
+    "rules": ".\\reports\\ensemble\\phase14c_adaptive_inverse_v1_rules.csv",
+    "results": ".\\reports\\ensemble\\phase14c_adaptive_inverse_v1_results.csv",
+    "monthly": ".\\reports\\ensemble\\phase14c_adaptive_inverse_v1_monthly.csv",
+    "trades": ".\\reports\\ensemble\\phase14c_adaptive_inverse_v1_trades.csv",
+    "opportunity_cost": ".\\reports\\ensemble\\phase14c_adaptive_inverse_v1_opportunity_cost.csv"
+  }
+}

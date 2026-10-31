@@ -1,0 +1,131 @@
+{
+  "timestamp": "2026-09-25 00:58:15.321373",
+  "model_name": "LSTM_V2_SCALED",
+  "input_dataset": ".\\data\\processed\\nifty\\nifty50_lstm_sequence_v2_scaled.npz",
+  "architecture": {
+    "sequence_length": 32,
+    "feature_count": 72,
+    "num_classes": 3,
+    "lstm_units": 64,
+    "dense_units": 32,
+    "dropout": 0.2
+  },
+  "training": {
+    "random_seed": 42,
+    "learning_rate": 0.001,
+    "batch_size": 32,
+    "max_epochs": 100,
+    "early_stopping_patience": 10,
+    "best_epoch": 2,
+    "best_validation_loss": 1.0063982009887695,
+    "epochs_completed": 12
+  },
+  "scaling": {
+    "method": "standardization (z-score)",
+    "scaler_fitted_on": "training_data_2015_2022_only",
+    "no_validation_leakage": true
+  },
+  "data_split": {
+    "train_rows": 18641,
+    "train_start": "2015-01-12 14:10:00",
+    "train_end": "2022-12-30 14:55:00",
+    "validation_rows": 2374,
+    "validation_start": "2023-01-02 14:10:00",
+    "validation_end": "2023-12-29 14:55:00",
+    "no_shuffle": true,
+    "chronological_order_preserved": true
+  },
+  "metrics": {
+    "accuracy": 0.5037910699241785,
+    "balanced_accuracy": 0.40624172092767535,
+    "log_loss": 1.0059863587102804,
+    "majority_baseline_class": "NEUTRAL",
+    "majority_baseline_accuracy": 0.4911541701769166
+  },
+  "confusion_matrix": [
+    [
+      148,
+      286,
+      93
+    ],
+    [
+      78,
+      984,
+      104
+    ],
+    [
+      222,
+      395,
+      64
+    ]
+  ],
+  "classification_report": {
+    "DOWN": {
+      "precision": 0.33035714285714285,
+      "recall": 0.2808349146110057,
+      "f1-score": 0.3035897435897436,
+      "support": 527.0
+    },
+    "NEUTRAL": {
+      "precision": 0.590990990990991,
+      "recall": 0.8439108061749572,
+      "f1-score": 0.6951607205934299,
+      "support": 1166.0
+    },
+    "UP": {
+      "precision": 0.24521072796934865,
+      "recall": 0.09397944199706314,
+      "f1-score": 0.13588110403397027,
+      "support": 681.0
+    },
+    "accuracy": 0.5037910699241785,
+    "macro avg": {
+      "precision": 0.3888529539391608,
+      "recall": 0.40624172092767535,
+      "f1-score": 0.3782105227390479,
+      "support": 2374.0
+    },
+    "weighted avg": {
+      "precision": 0.4339436459681281,
+      "recall": 0.5037910699241785,
+      "f1-score": 0.44780295995403036,
+      "support": 2374.0
+    }
+  },
+  "prediction_distribution": {
+    "DOWN": {
+      "count": 448,
+      "percentage": 18.871103622577927
+    },
+    "NEUTRAL": {
+      "count": 1665,
+      "percentage": 70.13479359730412
+    },
+    "UP": {
+      "count": 261,
+      "percentage": 10.994102780117945
+    }
+  },
+  "probability_statistics": {
+    "DOWN": {
+      "mean": 0.2879779040813446,
+      "max": 0.5993293523788452,
+      "min": 0.18213997781276703,
+      "std": 0.10057146102190018
+    },
+    "NEUTRAL": {
+      "mean": 0.3791147470474243,
+      "max": 0.5622292160987854,
+      "min": 0.005981466732919216,
+      "std": 0.12759777903556824
+    },
+    "UP": {
+      "mean": 0.3329072892665863,
+      "max": 0.531112015247345,
+      "min": 0.20460093021392822,
+      "std": 0.0373326800763607
+    }
+  },
+  "model_file": ".\\models\\lstm\\lstm_v2_model.keras",
+  "predictions_file": ".\\experiments\\lstm\\lstm_v2_validation_predictions.csv"
+}

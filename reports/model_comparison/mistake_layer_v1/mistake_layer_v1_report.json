@@ -1,0 +1,99 @@
+{
+  "phase": "12A",
+  "base_models": [
+    "XGB",
+    "LGB",
+    "CAT",
+    "LSTM",
+    "TRF"
+  ],
+  "base_decision": "strict majority",
+  "target": "Base_Wrong",
+  "discovery": "2023-01-01 to 2023-09-30",
+  "verification": "2023-10-01 to 2023-12-31",
+  "metrics": {
+    "rows": 590,
+    "features": 79,
+    "accuracy": 0.7847457627118644,
+    "balanced_accuracy": 0.7651931653920757,
+    "log_loss": 0.5380451982733583,
+    "roc_auc": 0.7953324026142499,
+    "base_mistake_rate": 0.3677966101694915,
+    "confusion_matrix": [
+      [
+        313,
+        60
+      ],
+      [
+        67,
+        150
+      ]
+    ],
+    "classification_report": {
+      "BASE_CORRECT": {
+        "precision": 0.8236842105263158,
+        "recall": 0.839142091152815,
+        "f1-score": 0.8313413014608234,
+        "support": 373.0
+      },
+      "BASE_WRONG": {
+        "precision": 0.7142857142857143,
+        "recall": 0.6912442396313364,
+        "f1-score": 0.702576112412178,
+        "support": 217.0
+      },
+      "accuracy": 0.7847457627118644,
+      "macro avg": {
+        "precision": 0.768984962406015,
+        "recall": 0.7651931653920757,
+        "f1-score": 0.7669587069365007,
+        "support": 590.0
+      },
+      "weighted avg": {
+        "precision": 0.7834478144513827,
+        "recall": 0.7847457627118644,
+        "f1-score": 0.783981901420898,
+        "support": 590.0
+      }
+    }
+  },
+  "selective_analysis": [
+    {
+      "threshold": 0.5,
+      "accepted_rows": 380,
+      "coverage": 0.6440677966101694,
+      "base_accuracy": 0.8236842105263158,
+      "base_wrong_rate": 0.1763157894736842
+    },
+    {
+      "threshold": 0.6,
+      "accepted_rows": 416,
+      "coverage": 0.7050847457627119,
+      "base_accuracy": 0.7932692307692307,
+      "base_wrong_rate": 0.20673076923076927
+    },
+    {
+      "threshold": 0.7,
+      "accepted_rows": 450,
+      "coverage": 0.7627118644067796,
+      "base_accuracy": 0.7555555555555555,
+      "base_wrong_rate": 0.24444444444444446
+    },
+    {
+      "threshold": 0.8,
+      "accepted_rows": 496,
+      "coverage": 0.8406779661016949,
+      "base_accuracy": 0.7056451612903226,
+      "base_wrong_rate": 0.2943548387096774
+    },
+    {
+      "threshold": 0.9,
+      "accepted_rows": 546,
+      "coverage": 0.9254237288135593,
+      "base_accuracy": 0.6648351648351648,
+      "base_wrong_rate": 0.3351648351648352
+    }
+  ],
+  "feature_count": 79,
+  "dataset_rows": 2373
+}

@@ -1,0 +1,109 @@
+{
+  "model": "LSTM_V1",
+  "sequence_file": ".\\data\\processed\\nifty\\nifty50_lstm_sequence_v1.npz",
+  "model_file": ".\\models\\lstm\\lstm_v1.keras",
+  "prediction_file": ".\\experiments\\lstm\\lstm_v1_predictions.csv",
+  "sequence_length": 32,
+  "feature_count": 72,
+  "lstm_units": 64,
+  "dense_units": 32,
+  "dropout": 0.2,
+  "learning_rate": 0.001,
+  "batch_size": 128,
+  "max_epochs": 100,
+  "early_stopping_patience": 10,
+  "random_seed": 42,
+  "train_start": "2015-01-12 14:10:00",
+  "train_end": "2022-12-30 14:55:00",
+  "validation_start": "2023-01-02 14:10:00",
+  "validation_end": "2023-12-29 14:55:00",
+  "train_rows": 18641,
+  "validation_rows": 2374,
+  "best_epoch": 5,
+  "best_validation_loss": 1.1419060230255127,
+  "accuracy": 0.22198820556023588,
+  "balanced_accuracy": 0.3333333333333333,
+  "log_loss": 1.1419059903180022,
+  "majority_baseline_accuracy": 0.4911541701769166,
+  "majority_baseline_class": "NEUTRAL",
+  "confusion_matrix": [
+    [
+      527,
+      0,
+      0
+    ],
+    [
+      1166,
+      0,
+      0
+    ],
+    [
+      681,
+      0,
+      0
+    ]
+  ],
+  "classification_report": {
+    "DOWN": {
+      "precision": 0.22198820556023588,
+      "recall": 1.0,
+      "f1-score": 0.36332299207169944,
+      "support": 527.0
+    },
+    "NEUTRAL": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 1166.0
+    },
+    "UP": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 681.0
+    },
+    "accuracy": 0.22198820556023588,
+    "macro avg": {
+      "precision": 0.07399606852007863,
+      "recall": 0.3333333333333333,
+      "f1-score": 0.12110766402389982,
+      "support": 2374.0
+    },
+    "weighted avg": {
+      "precision": 0.049278763407853546,
+      "recall": 0.22198820556023588,
+      "f1-score": 0.08065341904877237,
+      "support": 2374.0
+    }
+  },
+  "prediction_distribution": {
+    "DOWN": {
+      "count": 2374,
+      "percentage": 100.0
+    },
+    "NEUTRAL": {
+      "count": 0,
+      "percentage": 0.0
+    },
+    "UP": {
+      "count": 0,
+      "percentage": 0.0
+    }
+  },
+  "probability_distribution": {
+    "DOWN_mean": 0.36664870381355286,
+    "NEUTRAL_mean": 0.2848437428474426,
+    "UP_mean": 0.34850746393203735,
+    "DOWN_max": 0.36664870381355286,
+    "NEUTRAL_max": 0.284843772649765,
+    "UP_max": 0.34850743412971497
+  },
+  "validation": {
+    "chronological_split": true,
+    "shuffle": false,
+    "no_nan_input": true,
+    "no_inf_input": true,
+    "three_classes": true,
+    "train_before_validation": true
+  }
+}

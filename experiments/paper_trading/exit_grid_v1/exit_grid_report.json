@@ -1,0 +1,41 @@
+{
+  "engine": "exit_grid_v1",
+  "model": "TRF",
+  "mode": "RESEARCH_ONLY",
+  "grid": {
+    "stops_pct": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.3
+    ],
+    "trails_pct": [
+      0.05,
+      0.1,
+      0.15,
+      0.2
+    ]
+  },
+  "cost_bps": 5.0,
+  "capital_rupees": 50000.0,
+  "paths": [
+    "LOW_BEFORE_HIGH",
+    "HIGH_BEFORE_LOW",
+    "CANDLE_HEURISTIC"
+  ],
+  "n_random_controls": 20,
+  "random_pctl": 95,
+  "discovery": [
+    "2023-01-01",
+    "2023-09-30"
+  ],
+  "holdout": [
+    "2023-10-01",
+    "2023-12-31"
+  ],
+  "median_candle_range_pct": 0.06687527348685174,
+  "cells_passing": 0,
+  "cells_stable": 0,
+  "verdict": "NO_STABLE_EXIT_REGION"
+}

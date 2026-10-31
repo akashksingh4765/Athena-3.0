@@ -1,0 +1,106 @@
+{
+  "generated": "2026-09-25 10:25:30.973728",
+  "engine": "Model Interaction Discovery Engine V2.1",
+  "scope": "systematic bounded search over 8 families; NOT exhaustive",
+  "trade_economics": "out of scope in this phase",
+  "target_horizon_bars": 6,
+  "market_target_overlap_note": "consecutive MARKET labels share 5 future bars; effective N deflated, stricter survival bar applied",
+  "common_rows": 2374,
+  "discovery_rows": 1784,
+  "verification_rows": 590,
+  "lags_examined": [
+    1,
+    2,
+    3,
+    5,
+    10
+  ],
+  "survival_bars": {
+    "MODEL": {
+      "lift_disc": 0.05,
+      "lift_ver": 0.02,
+      "wilson_edge": 0.0
+    },
+    "MARKET": {
+      "lift_disc": 0.1,
+      "lift_ver": 0.05,
+      "wilson_edge": 0.01
+    }
+  },
+  "thresholds": {
+    "min_support_discovery": 30,
+    "min_support_verify": 15,
+    "min_support_stability": 8,
+    "assumed_alpha": 0.05
+  },
+  "candidates": 4796,
+  "verified": 607,
+  "robust": 533,
+  "multiple_testing": [
+    {
+      "target": "XGB_next_correct",
+      "target_kind": "MODEL",
+      "candidates_tested": 601,
+      "expected_false_positives": 30.1,
+      "verified": 98,
+      "robust": 83
+    },
+    {
+      "target": "LGB_next_correct",
+      "target_kind": "MODEL",
+      "candidates_tested": 601,
+      "expected_false_positives": 30.1,
+      "verified": 97,
+      "robust": 84
+    },
+    {
+      "target": "CAT_next_correct",
+      "target_kind": "MODEL",
+      "candidates_tested": 601,
+      "expected_false_positives": 30.1,
+      "verified": 96,
+      "robust": 85
+    },
+    {
+      "target": "LSTM_next_correct",
+      "target_kind": "MODEL",
+      "candidates_tested": 604,
+      "expected_false_positives": 30.2,
+      "verified": 100,
+      "robust": 91
+    },
+    {
+      "target": "TRF_next_correct",
+      "target_kind": "MODEL",
+      "candidates_tested": 604,
+      "expected_false_positives": 30.2,
+      "verified": 91,
+      "robust": 80
+    },
+    {
+      "target": "Maj_next_correct",
+      "target_kind": "MODEL",
+      "candidates_tested": 595,
+      "expected_false_positives": 29.8,
+      "verified": 93,
+      "robust": 82
+    },
+    {
+      "target": "Next_up",
+      "target_kind": "MARKET",
+      "candidates_tested": 595,
+      "expected_false_positives": 29.8,
+      "verified": 21,
+      "robust": 17
+    },
+    {
+      "target": "Next_down",
+      "target_kind": "MARKET",
+      "candidates_tested": 595,
+      "expected_false_positives": 29.8,
+      "verified": 11,
+      "robust": 11
+    }
+  ],
+  "output_directory": ".\\reports\\model_comparison\\model_interactions_v2_1_2023"
+}

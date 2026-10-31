@@ -1,0 +1,58 @@
+{
+  "config_hash": "8c98cde2c637",
+  "discovery_rows": 1784,
+  "q4_rows": 590,
+  "weights": [
+    {
+      "allocation_mode": "MODEL_WEIGHTED",
+      "weights": {
+        "ALL": {
+          "XGB": 0.2,
+          "LGB": 0.2,
+          "CAT": 0.2,
+          "LSTM": 0.2,
+          "TRF": 0.2
+        }
+      }
+    },
+    {
+      "allocation_mode": "MODEL_DIRECTION",
+      "weights": {
+        "UP": {
+          "XGB": 0.2,
+          "LGB": 0.2,
+          "CAT": 0.2,
+          "LSTM": 0.2,
+          "TRF": 0.2
+        },
+        "DOWN": {
+          "XGB": 0.2,
+          "LGB": 0.2,
+          "CAT": 0.2,
+          "LSTM": 0.2,
+          "TRF": 0.2
+        }
+      }
+    }
+  ],
+  "summary_file": ".\\reports\\economic_validation\\phase13b_standalone_performance_weighted_summary.csv",
+  "cost_grid_bps": [
+    0.0,
+    2.5,
+    5.0,
+    10.0,
+    15.0,
+    20.0
+  ],
+  "starting_capital_rupees": 50000.0,
+  "maximum_leverage": 5.0,
+  "selection_cost_bps": 5.0,
+  "models": [
+    "XGB",
+    "LGB",
+    "CAT",
+    "LSTM",
+    "TRF"
+  ],
+  "note": "Weights are frozen after discovery. Q4 is not used for weight learning. NEUTRAL predictions are never traded."
+}

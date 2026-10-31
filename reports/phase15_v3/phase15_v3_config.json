@@ -1,0 +1,65 @@
+{
+  "config_hash": "3d0816f69725",
+  "phase": "15_V3",
+  "model": "TRF",
+  "horizon_bars": 6,
+  "discovery": [
+    "2023-01-01",
+    "2023-09-30"
+  ],
+  "verification": [
+    "2023-10-01",
+    "2023-12-31"
+  ],
+  "forward": [
+    "2024-01-01",
+    "2024-12-31"
+  ],
+  "history_end": "2022-12-31",
+  "max_wait": 3,
+  "state_edges": [
+    -1.0,
+    0.0,
+    1.0
+  ],
+  "min_cell": 200,
+  "min_transitions": 50,
+  "min_delta_samples": 30,
+  "protective_stop_pct": 0.3,
+  "momentum_diag_z": 1.0,
+  "rv_lookback": 12,
+  "capacity_quantile": "Q75",
+  "wait_fixed": {
+    "window": 3,
+    "z": 1.0,
+    "cap_gate": true,
+    "buffer_bps": 5.0
+  },
+  "cost_bps": 5.0,
+  "costs_bps": [
+    0.0,
+    2.5,
+    5.0,
+    10.0,
+    15.0,
+    20.0
+  ],
+  "capital": 50000.0,
+  "capital_mode": "PRINCIPAL_ONLY",
+  "leverage": 1.0,
+  "last_entry": "15:10",
+  "square_off": "15:15",
+  "paths": [
+    "LOW_BEFORE_HIGH",
+    "HIGH_BEFORE_LOW",
+    "CANDLE_HEURISTIC"
+  ],
+  "n_random": 30,
+  "random_pctl": 95,
+  "boot_reps": 1000,
+  "min_verify_trades": 30,
+  "min_positive_months": 2,
+  "seed": 1517,
+  "volume_used": false,
+  "tuned_parameters": "NONE"
+}

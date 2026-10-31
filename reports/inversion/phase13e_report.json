@@ -1,0 +1,160 @@
+{
+  "phase": "13E",
+  "name": "Directional Inversion / Contrarian Validation V1",
+  "common_rows": 2374,
+  "discovery_rows": 1784,
+  "verification_2023_q4_rows": 590,
+  "forward_2024_q1_rows": 0,
+  "selection_cost_bps": 5.0,
+  "costs_bps": [
+    0.0,
+    5.0,
+    10.0,
+    15.0,
+    20.0
+  ],
+  "horizon_bars": 6,
+  "min_discovery_trades": 30,
+  "confidence_grid": [
+    0.35,
+    0.45,
+    0.55,
+    0.65
+  ],
+  "margin_grid": [
+    0.0,
+    0.1,
+    0.2
+  ],
+  "persistence_grid": [
+    1,
+    2,
+    3
+  ],
+  "volatility_cuts_discovery_only": {
+    "q1": 0.0003991054948398676,
+    "q2": 0.0005615171853740073
+  },
+  "rules": [
+    {
+      "Model": "XGB",
+      "Direction": "UP",
+      "Rule_Status": "NO_POSITIVE_DISCOVERY_RULE"
+    },
+    {
+      "Model": "XGB",
+      "Direction": "DOWN",
+      "Rule_Status": "NO_POSITIVE_DISCOVERY_RULE"
+    },
+    {
+      "Model": "LGB",
+      "Direction": "UP",
+      "Rule_Status": "NO_POSITIVE_DISCOVERY_RULE"
+    },
+    {
+      "Model": "LGB",
+      "Direction": "DOWN",
+      "Rule_Status": "NO_POSITIVE_DISCOVERY_RULE"
+    },
+    {
+      "Model": "CAT",
+      "Direction": "UP",
+      "Rule_Status": "FROZEN",
+      "Confidence": 0.45,
+      "Margin": 0.1,
+      "Persistence": 3,
+      "Trades": 150,
+      "Action": "FOLLOW",
+      "Discovery_Net_Avg_Bps": 2.090110542157726,
+      "Discovery_Net_Sum_Bps": 313.5165813236589,
+      "Discovery_PF": 3.0073513692871434,
+      "Follow_Net_Avg_Bps": 2.090110542157726,
+      "Follow_Net_Sum_Bps": 313.5165813236589,
+      "Reverse_Net_Avg_Bps": -12.090110542157724,
+      "Reverse_Net_Sum_Bps": -1813.5165813236586
+    },
+    {
+      "Model": "CAT",
+      "Direction": "DOWN",
+      "Rule_Status": "FROZEN",
+      "Confidence": 0.45,
+      "Margin": 0.1,
+      "Persistence": 1,
+      "Trades": 53,
+      "Action": "REVERSE",
+      "Discovery_Net_Avg_Bps": 3.11996194148585,
+      "Discovery_Net_Sum_Bps": 165.35798289875007,
+      "Discovery_PF": 2.9634656588970114,
+      "Follow_Net_Avg_Bps": -13.119961941485851,
+      "Follow_Net_Sum_Bps": -695.3579828987502,
+      "Reverse_Net_Avg_Bps": 3.11996194148585,
+      "Reverse_Net_Sum_Bps": 165.35798289875007
+    },
+    {
+      "Model": "LSTM",
+      "Direction": "UP",
+      "Rule_Status": "NO_POSITIVE_DISCOVERY_RULE"
+    },
+    {
+      "Model": "LSTM",
+      "Direction": "DOWN",
+      "Rule_Status": "FROZEN",
+      "Confidence": 0.35,
+      "Margin": 0.1,
+      "Persistence": 3,
+      "Trades": 176,
+      "Action": "REVERSE",
+      "Discovery_Net_Avg_Bps": 5.636517597847997,
+      "Discovery_Net_Sum_Bps": 992.0270972212476,
+      "Discovery_PF": 3.1952129098369517,
+      "Follow_Net_Avg_Bps": -15.636517597847996,
+      "Follow_Net_Sum_Bps": -2752.0270972212475,
+      "Reverse_Net_Avg_Bps": 5.636517597847997,
+      "Reverse_Net_Sum_Bps": 992.0270972212476
+    },
+    {
+      "Model": "TRF",
+      "Direction": "UP",
+      "Rule_Status": "FROZEN",
+      "Confidence": 0.35,
+      "Margin": 0.1,
+      "Persistence": 1,
+      "Trades": 73,
+      "Action": "FOLLOW",
+      "Discovery_Net_Avg_Bps": 0.7417530064829153,
+      "Discovery_Net_Sum_Bps": 54.14796947325282,
+      "Discovery_PF": 2.7280229904605218,
+      "Follow_Net_Avg_Bps": 0.7417530064829153,
+      "Follow_Net_Sum_Bps": 54.14796947325282,
+      "Reverse_Net_Avg_Bps": -10.741753006482915,
+      "Reverse_Net_Sum_Bps": -784.1479694732527
+    },
+    {
+      "Model": "TRF",
+      "Direction": "DOWN",
+      "Rule_Status": "FROZEN",
+      "Confidence": 0.45,
+      "Margin": 0.1,
+      "Persistence": 3,
+      "Trades": 108,
+      "Action": "REVERSE",
+      "Discovery_Net_Avg_Bps": 5.575312676483645,
+      "Discovery_Net_Sum_Bps": 602.1337690602337,
+      "Discovery_PF": 2.4657621476506,
+      "Follow_Net_Avg_Bps": -15.575312676483646,
+      "Follow_Net_Sum_Bps": -1682.1337690602338,
+      "Reverse_Net_Avg_Bps": 5.575312676483645,
+      "Reverse_Net_Sum_Bps": 602.1337690602337
+    }
+  ],
+  "files": {
+    "trade_candidates": ".\\experiments\\inversion\\phase13e_frozen_trade_candidates.csv",
+    "frozen_rules": ".\\reports\\inversion\\phase13e_frozen_rules.csv",
+    "discovery_grid": ".\\reports\\inversion\\phase13e_discovery_grid.csv",
+    "results": ".\\reports\\inversion\\phase13e_results.csv",
+    "combined_results": ".\\reports\\inversion\\phase13e_combined_results.csv",
+    "monthly_5bps": ".\\reports\\inversion\\phase13e_monthly_5bps.csv",
+    "recovery_5bps": ".\\reports\\inversion\\phase13e_recovery_5bps.csv",
+    "overlap": ".\\reports\\inversion\\phase13e_overlap.csv"
+  }
+}

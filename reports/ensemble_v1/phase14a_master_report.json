@@ -1,0 +1,838 @@
+{
+  "config_hash": "86419baa0b6e",
+  "config": {
+    "script": "phase14a_performance_weighted_ensemble_v1",
+    "horizon_bars": 6,
+    "confidence_min": 0.55,
+    "margin_min": 0.2,
+    "primary_cost_bps": 5.0,
+    "costs_bps": [
+      0.0,
+      2.5,
+      5.0,
+      10.0,
+      15.0,
+      20.0
+    ],
+    "capture_fractions": [
+      0.3,
+      0.35,
+      0.4
+    ],
+    "notional_rupees": 100000.0,
+    "models": [
+      "XGB",
+      "LGB",
+      "CAT",
+      "LSTM",
+      "TRF"
+    ],
+    "discovery": [
+      "2023-01-01 00:00:00",
+      "2023-09-30 23:59:59"
+    ],
+    "q4_test": [
+      "2023-10-01 00:00:00",
+      "2023-12-31 23:59:59"
+    ],
+    "q1_test": [
+      "2024-01-01 00:00:00",
+      "2024-03-31 23:59:59"
+    ],
+    "seed": 1401
+  },
+  "five_model_q4_2023": {
+    "track": "FIVE_MODEL_Q4_2023",
+    "config": {
+      "horizon_bars": 6,
+      "primary_cost_bps": 5.0,
+      "costs_bps": [
+        0.0,
+        2.5,
+        5.0,
+        10.0,
+        15.0,
+        20.0
+      ],
+      "confidence_min": 0.55,
+      "margin_min": 0.2,
+      "capture_fractions": [
+        0.3,
+        0.35,
+        0.4
+      ],
+      "notional_rupees": 100000.0,
+      "discovery_start": "2023-01-01 00:00:00",
+      "discovery_end": "2023-09-30 23:59:59",
+      "test_start": "2023-10-01 00:00:00",
+      "test_end": "2023-12-31 23:59:59"
+    },
+    "models": [
+      "XGB",
+      "LGB",
+      "CAT",
+      "LSTM",
+      "TRF"
+    ],
+    "model_stats": [
+      {
+        "model": "XGB",
+        "trades": 17,
+        "net_avg_bps": -17.76410389266174,
+        "pf": 0.06918467108176586,
+        "hit_rate": 0.11764705882352941,
+        "drawdown_bps": -292.32573959805654,
+        "gross_avg_bps": -12.764103892661739,
+        "score": 0.0
+      },
+      {
+        "model": "LGB",
+        "trades": 9,
+        "net_avg_bps": -23.877648317943265,
+        "pf": 0.014871302714584232,
+        "hit_rate": 0.1111111111111111,
+        "drawdown_bps": -218.14290402224262,
+        "gross_avg_bps": -18.877648317943265,
+        "score": 0.0
+      },
+      {
+        "model": "CAT",
+        "trades": 1,
+        "net_avg_bps": -15.310731973846021,
+        "pf": 0.0,
+        "hit_rate": 0.0,
+        "drawdown_bps": 0.0,
+        "gross_avg_bps": -10.310731973846021,
+        "score": 0.0
+      },
+      {
+        "model": "LSTM",
+        "trades": 9,
+        "net_avg_bps": -18.84811090033423,
+        "pf": 0.20198480508651095,
+        "hit_rate": 0.2222222222222222,
+        "drawdown_bps": -124.11831045955887,
+        "gross_avg_bps": -13.84811090033423,
+        "score": 0.0
+      },
+      {
+        "model": "TRF",
+        "trades": 42,
+        "net_avg_bps": -15.319361717486707,
+        "pf": 0.42376188657795066,
+        "hit_rate": 0.23809523809523808,
+        "drawdown_bps": -794.5237430146566,
+        "gross_avg_bps": -10.31936171748671,
+        "score": 0.0
+      }
+    ],
+    "weights": {
+      "XGB": 0.2,
+      "LGB": 0.2,
+      "CAT": 0.2,
+      "LSTM": 0.2,
+      "TRF": 0.2
+    },
+    "action_maps": {
+      "XGB": {
+        "UP": {
+          "action": "NO_TRADE",
+          "follow_avg_bps": null,
+          "reverse_avg_bps": null,
+          "n": 11,
+          "reason": "insufficient_discovery_trades"
+        },
+        "DOWN": {
+          "action": "NO_TRADE",
+          "follow_avg_bps": null,
+          "reverse_avg_bps": null,
+          "n": 6,
+          "reason": "insufficient_discovery_trades"
+        }
+      },
+      "LGB": {
+        "UP": {
+          "action": "NO_TRADE",
+          "follow_avg_bps": null,
+          "reverse_avg_bps": null,
+          "n": 7,
+          "reason": "insufficient_discovery_trades"
+        },
+        "DOWN": {
+          "action": "NO_TRADE",
+          "follow_avg_bps": null,
+          "reverse_avg_bps": null,
+          "n": 2,
+          "reason": "insufficient_discovery_trades"
+        }
+      },
+      "CAT": {
+        "UP": {
+          "action": "NO_TRADE",
+          "follow_avg_bps": null,
+          "reverse_avg_bps": null,
+          "n": 0,
+          "reason": "insufficient_discovery_trades"
+        },
+        "DOWN": {
+          "action": "NO_TRADE",
+          "follow_avg_bps": null,
+          "reverse_avg_bps": null,
+          "n": 1,
+          "reason": "insufficient_discovery_trades"
+        }
+      },
+      "LSTM": {
+        "UP": {
+          "action": "NO_TRADE",
+          "follow_avg_bps": null,
+          "reverse_avg_bps": null,
+          "n": 0,
+          "reason": "insufficient_discovery_trades"
+        },
+        "DOWN": {
+          "action": "NO_TRADE",
+          "follow_avg_bps": null,
+          "reverse_avg_bps": null,
+          "n": 9,
+          "reason": "insufficient_discovery_trades"
+        }
+      },
+      "TRF": {
+        "UP": {
+          "action": "NO_TRADE",
+          "follow_avg_bps": null,
+          "reverse_avg_bps": null,
+          "n": 0,
+          "reason": "insufficient_discovery_trades"
+        },
+        "DOWN": {
+          "action": "REVERSE",
+          "follow_avg_bps": -15.319361717486707,
+          "reverse_avg_bps": 5.3193617174867125,
+          "n": 42,
+          "reason": "economic_comparison"
+        }
+      }
+    },
+    "test_rows": 590,
+    "action_counts": {
+      "NO_TRADE": 590
+    },
+    "fixed_horizon_primary_cost_metrics": {
+      "trades": 0,
+      "avg_bps": null,
+      "sum_bps": null,
+      "pnl_rupees": null,
+      "hit_rate": null,
+      "profit_factor": null,
+      "max_drawdown_bps": null,
+      "trades_per_day": null
+    },
+    "cost_capture_results": [
+      {
+        "Track": "FIVE_MODEL_Q4_2023",
+        "Cost_Bps": 0.0,
+        "Capture_Fraction": 0.3,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "FIVE_MODEL_Q4_2023",
+        "Cost_Bps": 0.0,
+        "Capture_Fraction": 0.35,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "FIVE_MODEL_Q4_2023",
+        "Cost_Bps": 0.0,
+        "Capture_Fraction": 0.4,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "FIVE_MODEL_Q4_2023",
+        "Cost_Bps": 2.5,
+        "Capture_Fraction": 0.3,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "FIVE_MODEL_Q4_2023",
+        "Cost_Bps": 2.5,
+        "Capture_Fraction": 0.35,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "FIVE_MODEL_Q4_2023",
+        "Cost_Bps": 2.5,
+        "Capture_Fraction": 0.4,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "FIVE_MODEL_Q4_2023",
+        "Cost_Bps": 5.0,
+        "Capture_Fraction": 0.3,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "FIVE_MODEL_Q4_2023",
+        "Cost_Bps": 5.0,
+        "Capture_Fraction": 0.35,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "FIVE_MODEL_Q4_2023",
+        "Cost_Bps": 5.0,
+        "Capture_Fraction": 0.4,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "FIVE_MODEL_Q4_2023",
+        "Cost_Bps": 10.0,
+        "Capture_Fraction": 0.3,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "FIVE_MODEL_Q4_2023",
+        "Cost_Bps": 10.0,
+        "Capture_Fraction": 0.35,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "FIVE_MODEL_Q4_2023",
+        "Cost_Bps": 10.0,
+        "Capture_Fraction": 0.4,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "FIVE_MODEL_Q4_2023",
+        "Cost_Bps": 15.0,
+        "Capture_Fraction": 0.3,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "FIVE_MODEL_Q4_2023",
+        "Cost_Bps": 15.0,
+        "Capture_Fraction": 0.35,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "FIVE_MODEL_Q4_2023",
+        "Cost_Bps": 15.0,
+        "Capture_Fraction": 0.4,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "FIVE_MODEL_Q4_2023",
+        "Cost_Bps": 20.0,
+        "Capture_Fraction": 0.3,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "FIVE_MODEL_Q4_2023",
+        "Cost_Bps": 20.0,
+        "Capture_Fraction": 0.35,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "FIVE_MODEL_Q4_2023",
+        "Cost_Bps": 20.0,
+        "Capture_Fraction": 0.4,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      }
+    ]
+  },
+  "tree_transfer_q1_2024": {
+    "track": "TREE_TRANSFER_Q1_2024",
+    "config": {
+      "horizon_bars": 6,
+      "primary_cost_bps": 5.0,
+      "costs_bps": [
+        0.0,
+        2.5,
+        5.0,
+        10.0,
+        15.0,
+        20.0
+      ],
+      "confidence_min": 0.55,
+      "margin_min": 0.2,
+      "capture_fractions": [
+        0.3,
+        0.35,
+        0.4
+      ],
+      "notional_rupees": 100000.0,
+      "discovery_start": "2023-01-01 00:00:00",
+      "discovery_end": "2023-09-30 23:59:59",
+      "test_start": "2024-01-01 00:00:00",
+      "test_end": "2024-03-31 23:59:59"
+    },
+    "models": [
+      "XGB",
+      "LGB",
+      "CAT"
+    ],
+    "model_stats": [
+      {
+        "model": "XGB",
+        "trades": 26,
+        "net_avg_bps": -15.869599697080815,
+        "pf": 0.0750306804145799,
+        "hit_rate": 0.11538461538461539,
+        "drawdown_bps": -403.81110128331557,
+        "gross_avg_bps": -10.869599697080815,
+        "score": 0.0
+      },
+      {
+        "model": "LGB",
+        "trades": 17,
+        "net_avg_bps": -10.78676498061086,
+        "pf": 0.36587038244896614,
+        "hit_rate": 0.35294117647058826,
+        "drawdown_bps": -276.98857937291314,
+        "gross_avg_bps": -5.78676498061086,
+        "score": 0.0
+      },
+      {
+        "model": "CAT",
+        "trades": 5,
+        "net_avg_bps": -0.3386033785009957,
+        "pf": 0.963134198623519,
+        "hit_rate": 0.6,
+        "drawdown_bps": -45.923778387876304,
+        "gross_avg_bps": 4.661396621499002,
+        "score": 0.0
+      }
+    ],
+    "weights": {
+      "XGB": 0.3333333333333333,
+      "LGB": 0.3333333333333333,
+      "CAT": 0.3333333333333333
+    },
+    "action_maps": {
+      "XGB": {
+        "UP": {
+          "action": "NO_TRADE",
+          "follow_avg_bps": null,
+          "reverse_avg_bps": null,
+          "n": 11,
+          "reason": "insufficient_discovery_trades"
+        },
+        "DOWN": {
+          "action": "NO_TRADE",
+          "follow_avg_bps": null,
+          "reverse_avg_bps": null,
+          "n": 15,
+          "reason": "insufficient_discovery_trades"
+        }
+      },
+      "LGB": {
+        "UP": {
+          "action": "NO_TRADE",
+          "follow_avg_bps": null,
+          "reverse_avg_bps": null,
+          "n": 7,
+          "reason": "insufficient_discovery_trades"
+        },
+        "DOWN": {
+          "action": "NO_TRADE",
+          "follow_avg_bps": null,
+          "reverse_avg_bps": null,
+          "n": 10,
+          "reason": "insufficient_discovery_trades"
+        }
+      },
+      "CAT": {
+        "UP": {
+          "action": "NO_TRADE",
+          "follow_avg_bps": null,
+          "reverse_avg_bps": null,
+          "n": 0,
+          "reason": "insufficient_discovery_trades"
+        },
+        "DOWN": {
+          "action": "NO_TRADE",
+          "follow_avg_bps": null,
+          "reverse_avg_bps": null,
+          "n": 5,
+          "reason": "insufficient_discovery_trades"
+        }
+      }
+    },
+    "test_rows": 2419,
+    "action_counts": {
+      "NO_TRADE": 2419
+    },
+    "fixed_horizon_primary_cost_metrics": {
+      "trades": 0,
+      "avg_bps": null,
+      "sum_bps": null,
+      "pnl_rupees": null,
+      "hit_rate": null,
+      "profit_factor": null,
+      "max_drawdown_bps": null,
+      "trades_per_day": null
+    },
+    "cost_capture_results": [
+      {
+        "Track": "TREE_TRANSFER_Q1_2024",
+        "Cost_Bps": 0.0,
+        "Capture_Fraction": 0.3,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "TREE_TRANSFER_Q1_2024",
+        "Cost_Bps": 0.0,
+        "Capture_Fraction": 0.35,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "TREE_TRANSFER_Q1_2024",
+        "Cost_Bps": 0.0,
+        "Capture_Fraction": 0.4,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "TREE_TRANSFER_Q1_2024",
+        "Cost_Bps": 2.5,
+        "Capture_Fraction": 0.3,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "TREE_TRANSFER_Q1_2024",
+        "Cost_Bps": 2.5,
+        "Capture_Fraction": 0.35,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "TREE_TRANSFER_Q1_2024",
+        "Cost_Bps": 2.5,
+        "Capture_Fraction": 0.4,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "TREE_TRANSFER_Q1_2024",
+        "Cost_Bps": 5.0,
+        "Capture_Fraction": 0.3,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "TREE_TRANSFER_Q1_2024",
+        "Cost_Bps": 5.0,
+        "Capture_Fraction": 0.35,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "TREE_TRANSFER_Q1_2024",
+        "Cost_Bps": 5.0,
+        "Capture_Fraction": 0.4,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "TREE_TRANSFER_Q1_2024",
+        "Cost_Bps": 10.0,
+        "Capture_Fraction": 0.3,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "TREE_TRANSFER_Q1_2024",
+        "Cost_Bps": 10.0,
+        "Capture_Fraction": 0.35,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "TREE_TRANSFER_Q1_2024",
+        "Cost_Bps": 10.0,
+        "Capture_Fraction": 0.4,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "TREE_TRANSFER_Q1_2024",
+        "Cost_Bps": 15.0,
+        "Capture_Fraction": 0.3,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "TREE_TRANSFER_Q1_2024",
+        "Cost_Bps": 15.0,
+        "Capture_Fraction": 0.35,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "TREE_TRANSFER_Q1_2024",
+        "Cost_Bps": 15.0,
+        "Capture_Fraction": 0.4,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "TREE_TRANSFER_Q1_2024",
+        "Cost_Bps": 20.0,
+        "Capture_Fraction": 0.3,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "TREE_TRANSFER_Q1_2024",
+        "Cost_Bps": 20.0,
+        "Capture_Fraction": 0.35,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      },
+      {
+        "Track": "TREE_TRANSFER_Q1_2024",
+        "Cost_Bps": 20.0,
+        "Capture_Fraction": 0.4,
+        "trades": 0,
+        "avg_bps": null,
+        "sum_bps": null,
+        "pnl_rupees": null,
+        "hit_rate": null,
+        "profit_factor": null,
+        "max_drawdown_bps": null,
+        "trades_per_day": null
+      }
+    ]
+  }
+}

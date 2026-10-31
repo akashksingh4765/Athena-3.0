@@ -1,0 +1,189 @@
+{
+  "phase": "13E_V2",
+  "config_hash": "8caed37e989d",
+  "locked": {
+    "engine_version": "13E_V2_FINAL",
+    "coverage_gate_mode": "EVERY_ELIGIBLE_SESSION_MEETS_THRESHOLD",
+    "selection_cost_bps": 5.0,
+    "costs_bps": [
+      0.0,
+      2.5,
+      5.0,
+      10.0,
+      15.0,
+      20.0
+    ],
+    "confidence_grid_Pdir": [
+      0.35,
+      0.45,
+      0.55
+    ],
+    "margin_grid": [
+      0.0,
+      0.1,
+      0.2
+    ],
+    "persistence_grid": [
+      1,
+      2,
+      3
+    ],
+    "min_trades": 40,
+    "min_half_trades": 15,
+    "plateau_min_frac": 0.5,
+    "boot_q": 0.05,
+    "alpha": 0.05,
+    "seed": 1302,
+    "execution": "signal@close t -> entry open t+1 -> exit close t+6, same session, non-overlapping",
+    "coverage_definition": "coverage is measured against each track's declared model-eligible timestamp universe, not the full 75 raw 5-minute session bars; reliability requires every eligible session to meet the locked threshold",
+    "coverage_universes": {
+      "A_FIVE_MODEL": {
+        "type": "prediction_timestamp_union",
+        "files": [
+          "experiments/lstm/lstm_v2_validation_predictions.csv",
+          "experiments/transformer/transformer_v1_validation_predictions.csv"
+        ]
+      },
+      "B_TREE_TRANSFER": {
+        "type": "training_timestamp",
+        "file": "data/processed/nifty/nifty50_intraday_training_v2.csv"
+      }
+    }
+  },
+  "tracks": [
+    {
+      "track": "A_FIVE_MODEL",
+      "q4_status": "SEEN_DIAGNOSTIC_ONLY",
+      "rows": 2374,
+      "candidates_tested": 648,
+      "vol_cuts_discovery_only": {
+        "q1": 0.0003991054948398672,
+        "q2": 0.0005615171853740074
+      },
+      "session_coverage": {
+        "DISCOVERY": {
+          "eligible_rows": 1784,
+          "matched_rows": 1784,
+          "missing_eligible_rows": 0,
+          "extra_prediction_rows": 0,
+          "eligible_first_clock": "14:10",
+          "eligible_last_clock": "14:55",
+          "matched_first_clock": "14:10",
+          "matched_last_clock": "14:55",
+          "eligible_bars_per_session": 9.966480446927374,
+          "matched_bars_per_session": 9.966480446927374,
+          "sessions": 179,
+          "coverage_frac": 1.0,
+          "min_session_coverage_frac": 1.0,
+          "sessions_below_gate": 0,
+          "universe_type": "prediction_timestamp_union"
+        },
+        "Q4_2023": {
+          "eligible_rows": 590,
+          "matched_rows": 590,
+          "missing_eligible_rows": 0,
+          "extra_prediction_rows": 0,
+          "eligible_first_clock": "14:10",
+          "eligible_last_clock": "14:55",
+          "matched_first_clock": "14:10",
+          "matched_last_clock": "14:55",
+          "eligible_bars_per_session": 10.0,
+          "matched_bars_per_session": 10.0,
+          "sessions": 59,
+          "coverage_frac": 1.0,
+          "min_session_coverage_frac": 1.0,
+          "sessions_below_gate": 0,
+          "universe_type": "prediction_timestamp_union"
+        },
+        "Q1_2024": null
+      },
+      "min_session_coverage_frac": 0.9,
+      "coverage_reliable": {
+        "DISCOVERY": true,
+        "Q4_2023": true,
+        "Q1_2024": false
+      },
+      "observed_best_lb_bps": null,
+      "n_perm": 0,
+      "null_share_finding_any_rule": NaN,
+      "selection_adjusted_p": 1.0,
+      "rules": [],
+      "verdicts": []
+    },
+    {
+      "track": "B_TREE_TRANSFER",
+      "q4_status": "PARTLY_SEEN",
+      "rows": 12255,
+      "candidates_tested": 432,
+      "vol_cuts_discovery_only": {
+        "q1": 0.0003615902886423,
+        "q2": 0.0005002709217557228
+      },
+      "session_coverage": {
+        "DISCOVERY": {
+          "eligible_rows": 7377,
+          "matched_rows": 7377,
+          "missing_eligible_rows": 0,
+          "extra_prediction_rows": 0,
+          "eligible_first_clock": "11:35",
+          "eligible_last_clock": "14:55",
+          "matched_first_clock": "11:35",
+          "matched_last_clock": "14:55",
+          "eligible_bars_per_session": 40.983333333333334,
+          "matched_bars_per_session": 40.983333333333334,
+          "sessions": 180,
+          "coverage_frac": 1.0,
+          "min_session_coverage_frac": 1.0,
+          "sessions_below_gate": 0,
+          "universe_type": "training_timestamp"
+        },
+        "Q4_2023": {
+          "eligible_rows": 2459,
+          "matched_rows": 2459,
+          "missing_eligible_rows": 0,
+          "extra_prediction_rows": 0,
+          "eligible_first_clock": "11:35",
+          "eligible_last_clock": "14:55",
+          "matched_first_clock": "11:35",
+          "matched_last_clock": "14:55",
+          "eligible_bars_per_session": 40.983333333333334,
+          "matched_bars_per_session": 40.983333333333334,
+          "sessions": 60,
+          "coverage_frac": 1.0,
+          "min_session_coverage_frac": 1.0,
+          "sessions_below_gate": 0,
+          "universe_type": "training_timestamp"
+        },
+        "Q1_2024": {
+          "eligible_rows": 2419,
+          "matched_rows": 2419,
+          "missing_eligible_rows": 0,
+          "extra_prediction_rows": 0,
+          "eligible_first_clock": "11:35",
+          "eligible_last_clock": "14:55",
+          "matched_first_clock": "11:35",
+          "matched_last_clock": "14:55",
+          "eligible_bars_per_session": 41.0,
+          "matched_bars_per_session": 41.0,
+          "sessions": 59,
+          "coverage_frac": 1.0,
+          "min_session_coverage_frac": 1.0,
+          "sessions_below_gate": 0,
+          "universe_type": "training_timestamp"
+        }
+      },
+      "min_session_coverage_frac": 0.9,
+      "coverage_reliable": {
+        "DISCOVERY": true,
+        "Q4_2023": true,
+        "Q1_2024": true
+      },
+      "observed_best_lb_bps": null,
+      "n_perm": 0,
+      "null_share_finding_any_rule": NaN,
+      "selection_adjusted_p": 1.0,
+      "rules": [],
+      "verdicts": []
+    }
+  ]
+}
